@@ -1,10 +1,14 @@
 {
-  "name": "web-quiz",
+  "name": "atq-quiz",
   "version": "1.0.0",
   "description": "",
+  "main": "main.js",
   "scripts": {
-    "start": "http-server -o",
-    "deploy": "gulp"
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auromota/atq-quiz.git"
   },
   "author": "BlueOrc",
   "contributors": [
@@ -13,31 +17,12 @@
       "email": "auro@blueorc.com"
     }
   ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/auromota/atq-quiz"
-  },
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/auromota/atq-quiz/issues"
   },
-  "dependencies": {
-    "angular": "^1.5.5",
-    "angular-google-chart": "^0.1.0",
-    "angular-sweetalert": "^1.1.0",
-    "angular-ui-router": "^0.3.0",
-    "bootstrap": "^3.3.6",
-    "http-server": "^0.9.0",
-    "jquery": "^2.2.4",
-    "lovefield": "^2.1.8",
-    "sweetalert": "^1.1.3"
-  },
+  "homepage": "https://github.com/auromota/atq-quiz#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-html-replace": "^1.6.1",
-    "gulp-jsonminify": "^1.0.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-minify-html": "^1.0.6",
-    "gulp-uglify": "^1.5.3"
+    "electron-prebuilt": "^1.2.7"
   }
 }
