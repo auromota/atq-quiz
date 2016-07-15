@@ -1,12 +1,13 @@
 /*
     Author: Auro Mota <auro@blueorc.com>
-    (c) 2016 BlueOrc http://blueorc.com/
 */
 
-(function() {
+(function () {
     'use strict';
 
     app.config(configRoute);
+
+    configRoute.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function configRoute($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home');
@@ -28,14 +29,26 @@
                 controller: 'logsCtrl'
             })
             .state('test', {
-                url: '/test/:answerId',
+                url: '/test',
                 templateUrl: 'partials/_test.html',
-                controller: 'testCtrl'
+                controller: 'testCtrl',
+                params: {
+                    answerId: null,
+                    answered: 0,
+                    total: 1
+                }
             })
             .state('testCompleted', {
-                url: '/testCompleted/:testId',
                 templateUrl: 'partials/_test-completed.html',
-                controller: 'testCompletedCtrl'
+                controller: 'testCompletedCtrl',
+                params: {
+                    testId: null
+                }
+            })
+            .state('testDetails', {
+                url: '/logs/:testId',
+                templateUrl: 'partials/_test-details.html',
+                controller: 'testDetailsCtrl',
             });
 
     }

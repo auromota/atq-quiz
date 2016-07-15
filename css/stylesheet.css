@@ -1,4 +1,33 @@
 /*
-    Author: Auro Mota <auro@blueorc.com>
-    (c) 2016 BlueOrc http://blueorc.com/
+    Author: Fabiano Lomonaco <fabiano.lomonaco.junior@gmail.com>
+            Auro Mota <auro@blueorc.com>
 */
+
+.jumbotron-btns a:nth-child(2) {
+    margin-left: 10px;
+}
+
+.btn-test {
+    margin-top: 20px;
+    margin-bottom: -20px !important;
+}
+
+.result {
+    width: 40% !important;
+}
+
+.left-panel {
+    width: 30% !important;
+}
+
+.green-answer {
+    color: green;
+}
+
+.red-answer {
+    color: red;
+}
+
+.mouse-link {
+    cursor: pointer;
+}

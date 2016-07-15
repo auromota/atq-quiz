@@ -1,6 +1,5 @@
 /*
     Author: Auro Mota <auro@blueorc.com>
-    (c) 2016 BlueOrc http://blueorc.com/
 */
 
 (function() {
@@ -8,48 +7,93 @@
 
     app.controller('testCtrl', testCtrl);
 
-    testCtrl.$inject = ['$scope', '$stateParams', '$rootScope', 'answerService', 'questionService'];
+    testCtrl.$inject = ['$scope', '$stateParams', '$rootScope', '$state', '$timeout', '$interval', 'SweetAlert', 'answerService', 'questionService', 'securityService', 'utilService'];
 
-    function testCtrl($scope, $stateParams, $rootScope, answerService, questionService) {
+    function testCtrl($scope, $stateParams, $rootScope, $state, $timeout, $interval, SweetAlert, answerService, questionService, securityService, utilService) {
 
-        function loadQuestion() {
-            answerService.getById(parseInt($stateParams.answerId)).then(
-                function(answers) {
-                    if(answers.length) {
-                        $scope.answer = answers[0];
-                        questionService.getById($scope.answer.questionId).then(
-                            function(questions) {
-                                if(questions.length) {
-                                    $scope.question = questions[0];
-                                }
-                            }
-                        )
-                    }
-                }
-            )
+        var user = securityService.getUser();
+        var time = 0;
+
+        if(user.id) {
+            loadAnswers();
+        } else {
+            $state.go('home');
         }
-
-        loadQuestion();
 
         $scope.hasAnswered = false;
 
-        $scope.submit = function() {
-            $scope.hasAnswered = true;
-            if(parseInt($scope.answer.answer) == $scope.question.rightAnswer) {
-                $scope.answer.right = true;
+        function loadAnswers() {
+            if($stateParams.answerId) {
+                var id = parseInt($stateParams.answerId);
+                answerService.getById(id).then(loadQuestion);
             } else {
-                $scope.answer.right = false;
+                $state.go('home');
             }
-            answerService.update($scope.answer).then(
-                function() {
-                    if($scope.answer.right) {
-                        alert('Você acertou!');
-                    } else {
-                        alert('Você errou!');
-                    }
-                    $rootScope.$broadcast('questionAnswered', $scope.answer);
-                }
-            );
+        }
+
+        function loadQuestion(answers) {
+            if(answers.length) {
+                $scope.answer = answers[0];
+                questionService.getById($scope.answer.questionId).then(updateProgressBar);
+            }
+        }
+
+        function updateProgressBar(questions) {
+            if(questions.length) {
+                $scope.question = questions[0];
+                var percentage = utilService.getPercetange($state.params.answered, $state.params.total);
+                $scope.$emit('percentageReady', percentage);
+                startTimeCounter();
+            }
+        }
+
+        function startTimeCounter() {
+            $interval(function() {
+                time+=0.005;
+            }, 5);
+        }
+
+        function getTime() {
+            $scope.answer.time = angular.copy(time);
+        }
+
+        function checkAnswer() {
+            if(!$scope.answer.answer) return null;
+            var answer = parseInt($scope.answer.answer);
+            if(answer === $scope.question.rightAnswer) {
+                return true;
+            }
+            return false;
+        }
+
+        $scope.submit = function() {
+            var answer = checkAnswer();
+            if(answer !== null) {
+                $scope.hasAnswered = true;
+                getTime();
+                $scope.answer.right = checkAnswer();
+                answerService.update($scope.answer).then(showResult);
+            }
+        }
+
+        function showResult() {
+            var params = {};
+            if($scope.answer.right) {
+                params.title = 'Parabéns!';
+                params.text = 'Você acertou a questão.';
+                params.type = 'success';
+                params.confirmButtonColor = '#2c3e50';
+            } else {
+                params.title = 'Que pena!';
+                params.text = 'Você errou a questão.';
+                params.type = 'error';
+                params.confirmButtonColor = '#2c3e50';
+            }
+            SweetAlert.swal(params, doBroadcast);
+        }
+
+        function doBroadcast() {
+            $rootScope.$broadcast('questionAnswered', $scope.answer);
         }
     }
 

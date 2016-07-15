@@ -1,6 +1,5 @@
 /*
     Author: Auro Mota <auro@blueorc.com>
-    (c) 2016 BlueOrc http://blueorc.com/
 */
 
 (function() {
@@ -31,7 +30,10 @@
         columns: [
             { name: 'id', type: lf.Type.INTEGER },
             { name: 'userId', type: lf.Type.STRING },
-            { name: 'isCompleted', type: lf.Type.BOOLEAN }
+            { name: 'completedOn', type: lf.Type.DATE_TIME, isNullable: true },
+            { name: 'percentage', type: lf.Type.NUMBER, isNullable: true },
+            { name: 'total', type: lf.Type.NUMBER, isNullable: true },
+            { name: 'right', type: lf.Type.NUMBER, isNullable: true }
         ],
         primaryKeys: [{ column: 'id', isAutoIncrement: true }],
         foreignKeys: [{ name: 'fkUserId', column: 'userId', ref: 'users.id', action: lf.ConstraintAction.CASCADE }]
@@ -43,7 +45,9 @@
             { name: 'testId', type: lf.Type.INTEGER },
             { name: 'questionId', type: lf.Type.INTEGER },
             { name: 'answer', type: lf.Type.INTEGER, isNullable: true },
-            { name: 'right', type: lf.Type.BOOLEAN, isNullable: true }
+            { name: 'right', type: lf.Type.BOOLEAN, isNullable: true },
+            { name: 'time', type: lf.Type.NUMBER },
+            { name: 'order', type: lf.Type.INTEGER }
         ],
         primaryKeys: [{column: 'id', isAutoIncrement: true}],
         foreignKeys: [
@@ -60,5 +64,7 @@
     };
 
     app.constant('TABLE', tables);
+
+    app.constant('NUMBER_OF_QUESTIONS', 10);
 
 })();

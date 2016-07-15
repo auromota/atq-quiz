@@ -1,6 +1,5 @@
 /*
     Author: Auro Mota <auro@blueorc.com>
-    (c) 2016 BlueOrc http://blueorc.com/
 */
 
 (function() {
@@ -8,29 +7,27 @@
 
     app.controller('testCompletedCtrl', testCompletedCtrl);
 
-    testCompletedCtrl.$inject = ['$scope', '$stateParams', 'answerService'];
+    testCompletedCtrl.$inject = ['$scope', '$stateParams', '$state', 'testService', 'securityService'];
 
-    function testCompletedCtrl($scope, $stateParams, answerService) {
-        $scope.answers = {};
-        $scope.total = null;
-        $scope.rightCount = null;
+    function testCompletedCtrl($scope, $stateParams, $state, testService, securityService) {
+        var user = securityService.getUser();
+
+        if(user.id) {
+            loadTest($stateParams.testId);
+        } else {
+            $state.go('home');
+        }
 
         function loadTest(id) {
-            answerService.getByTestId(id).then(
-                function(answers) {
-                    $scope.answers = answers;
-                    $scope.total = $scope.answers.length;
-                    $scope.rightCount = 0;
-                    $scope.answers.forEach(function(answer) {
-                        if(answer.right) {
-                            $scope.rightCount++;
-                        }
-                    });
+            testService.getById(id).then(
+                function(test) {
+                    $scope.rightCount = test.right;
+                    $scope.total = test.total;
+                    $scope.$emit('percentageReady', test.percentage);
                 }
             )
         }
 
-        loadTest($stateParams.testId);
     }
 
 })();

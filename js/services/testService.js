@@ -1,6 +1,5 @@
 /*
     Author: Auro Mota <auro@blueorc.com>
-    (c) 2016 BlueOrc http://blueorc.com/
 */
 
 (function() {
@@ -15,14 +14,17 @@
             getByUserId: getByUserId,
             add: add,
             update: update,
-            getById: getById
+            getById: getById,
+            getAllTestsAndUsers: getAllTestsAndUsers,
+            getTestAndUser: getTestAndUser,
+            removeAll: removeAll
         }
 
         return service;
 
         function add(test) {
             var deferred = $q.defer();
-            crudService.insert(test, dbService.tests).then(
+            crudService.insert(test, 'tests').then(
                 function(test) {
                     deferred.resolve(test);
                 }, function(err) {
@@ -34,7 +36,7 @@
 
         function getByUserId(userId) {
             var deferred = $q.defer();
-            crudService.find(userId, dbService.tests, 'userId').then(
+            crudService.find(userId, 'tests', 'userId').then(
                 function(tests) {
                     deferred.resolve(tests);
                 }, function(err) {
@@ -46,7 +48,7 @@
 
         function update(test) {
             var deferred = $q.defer();
-            crudService.update(test.id, test, dbService.tests).then(
+            crudService.update(test.id, test, 'tests').then(
                 function(result) {
                     deferred.resolve(result);
                 }, function(err) {
@@ -58,9 +60,61 @@
 
         function getById(id) {
             var deferred = $q.defer();
-            crudService.find(id, dbService.tests, 'id').then(
+            crudService.find(id, 'tests', 'id').then(
                 function(tests) {
-                    deferred.resolve(tests);
+                    deferred.resolve(tests[0]);
+                }, function(err) {
+                    deferred.reject(err);
+                }
+            );
+            return deferred.promise;
+        }
+
+        function getAllTestsAndUsers() {
+            var deferred = $q.defer();
+            try {
+                dbService.db.select()
+                    .from(dbService.tests)
+                    .innerJoin(dbService.users, dbService.tests.userId.eq(dbService.users.id))
+                    .where(dbService.tests.completedOn.isNotNull())
+                    .exec().then(
+                        function(tests) {
+                            deferred.resolve(tests);
+                        }, function(err) {
+                            deferred.reject(err);
+                        }
+                    );
+            } catch (err) {
+                deferred.reject(err);
+            }
+            return deferred.promise;
+        }
+
+        function getTestAndUser(id) {
+            var deferred = $q.defer();
+            try {
+                dbService.db.select()
+                    .from(dbService.tests)
+                    .innerJoin(dbService.users, dbService.tests.userId.eq(dbService.users.id))
+                    .where(dbService.tests.id.eq(id))
+                    .exec().then(
+                        function(test) {
+                            deferred.resolve(test[0]);
+                        }, function(err) {
+                            deferred.reject(err);
+                        }
+                    );
+            } catch (err) {
+                deferred.reject(err);
+            }
+            return deferred.promise;
+        }
+
+        function removeAll() {
+            var deferred = $q.defer();
+            crudService.removeAll('tests').then(
+                function(result) {
+                    deferred.resolve(result);
                 }, function(err) {
                     deferred.reject(err);
                 }
