@@ -31,3 +31,28 @@
 .mouse-link {
     cursor: pointer;
 }
+
+.result-logs {
+    text-align: center;
+}
+
+.score {
+    font-size: 75px;
+}
+
+.expand {
+    float: right;
+    cursor: pointer;
+    position: absolute !important;
+    top: initial !important;
+    bottom: 0px;
+    right: 0px;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+.result-box {
+    position: relative;
+}

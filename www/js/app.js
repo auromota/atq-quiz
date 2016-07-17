@@ -3,7 +3,7 @@
 */
 
 'use strict';
-var app = angular.module('app', ['ui.router', 'oitozero.ngSweetAlert', 'googlechart'])
+var app = angular.module('app', ['ui.router', 'oitozero.ngSweetAlert', 'googlechart', 'ui.bootstrap', 'ngAnimate'])
 
     .run(['dbService', function (dbService) {
         dbService.initDatabase();

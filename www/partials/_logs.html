@@ -7,37 +7,76 @@
     <li class="active">Relatórios</li>
 </ul>
 
-<div>
-    <div class="col-lg-11">
-        <h3>Testes realizados</h3>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Relatórios</h3>
     </div>
-    <div class="col-lg-1">
-        <a class="btn btn-danger" ng-click="clear()">Apagar</a>
-    </div>
-</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-4 result-logs">
+                <h4>Média de acertos:</h4>
+                <div class="score">77%</div>
+            </div>
+            <div class="col-lg-4 result-logs">
+                <h4>Maior pontuação:</h4>
+                <div class="result-box">
+                    <span class="score">91%</span>
+                    <span class="expand glyphicon" ng-class="{'glyphicon-triangle-bottom': maxCollapsed, 'glyphicon-triangle-top': !maxCollapsed}"
+                        ng-click="maxCollapsed = !maxCollapsed"></span>
+                </div>
+                <div uib-collapse="maxCollapsed" class="well">
+                    <p><strong>Matrícula:</strong> 9951</p>
+                    <p><strong>Usuário:</strong> Auro Felipe Sampaio Mota</p>
+                    <p><strong>Duração do teste:</strong> 50 s</p>
+                </div>
+            </div>
+            <div class="col-lg-4 result-logs">
+                <h4>Menor pontuação:</h4>
+                <div class="result-box">
+                    <span class="score">43%</span>
+                    <span class="expand glyphicon" ng-class="{'glyphicon-triangle-bottom': minCollapsed, 'glyphicon-triangle-top': !minCollapsed}"
+                        ng-click="minCollapsed = !minCollapsed"></span>
+                </div>
+                <div uib-collapse="minCollapsed" class="well">
+                    <p><strong>Matrícula:</strong> 9951</p>
+                    <p><strong>Usuário:</strong> Auro Felipe Sampaio Mota</p>
+                    <p><strong>Duração do teste:</strong> 50 s</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="col-lg-11">
+                <h3>Testes realizados</h3>
+            </div>
+            <div class="col-lg-1">
+                <a class="btn btn-danger" ng-click="clear()">Apagar</a>
+            </div>
+        </div>
 
-<div class="bs-component panel">
-    <table class="table table-hover table-responsive">
-        <thead>
-            <tr class="active table-text">
-                <th>Matrícula</th>
-                <th>Nome</th>
-                <th>Porcentagem de acerto</th>
-                <th>Feito em</th>
-                <th>Detalhes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-if="tests.length == 0">
-                <td colspan="5">Nenhum teste foi realizado.</td>
-            </tr>
-            <tr ng-repeat="test in tests">
-                <td>{{test.users.id}}</td>
-                <td>{{test.users.name}}</td>
-                <td>{{test.tests.percentage | number: 0}}%</td>
-                <td>{{test.tests.completedOn | date: 'dd/MM/yyyy - HH:mm'}}</td>
-                <td ng-click="details(test.tests.id)"><span class="glyphicon glyphicon-info-sign mouse-link"></span></td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="bs-component panel">
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr class="active table-text">
+                        <th>Matrícula</th>
+                        <th>Nome</th>
+                        <th>Porcentagem de acerto</th>
+                        <th>Feito em</th>
+                        <th>Detalhes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-if="tests.length == 0">
+                        <td colspan="5">Nenhum teste foi realizado.</td>
+                    </tr>
+                    <tr ng-repeat="test in tests">
+                        <td>{{test.users.id}}</td>
+                        <td>{{test.users.name}}</td>
+                        <td>{{test.tests.percentage | number: 0}}%</td>
+                        <td>{{test.tests.completedOn | date: 'dd/MM/yyyy - HH:mm'}}</td>
+                        <td ng-click="details(test.tests.id)"><span class="glyphicon glyphicon-info-sign mouse-link"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
