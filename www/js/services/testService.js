@@ -2,7 +2,7 @@
     Author: Auro Mota <auro@blueorc.com>
 */
 
-(function() {
+(function () {
     'use strict';
 
     app.factory('testService', testService);
@@ -25,9 +25,9 @@
         function add(test) {
             var deferred = $q.defer();
             crudService.insert(test, 'tests').then(
-                function(test) {
+                function (test) {
                     deferred.resolve(test);
-                }, function(err) {
+                }, function (err) {
                     deferred.reject(err);
                 }
             );
@@ -37,9 +37,9 @@
         function getByUserId(userId) {
             var deferred = $q.defer();
             crudService.find(userId, 'tests', 'userId').then(
-                function(tests) {
+                function (tests) {
                     deferred.resolve(tests);
-                }, function(err) {
+                }, function (err) {
                     deferred.reject(err);
                 }
             );
@@ -49,9 +49,9 @@
         function update(test) {
             var deferred = $q.defer();
             crudService.update(test.id, test, 'tests').then(
-                function(result) {
+                function (result) {
                     deferred.resolve(result);
-                }, function(err) {
+                }, function (err) {
                     deferred.reject(err);
                 }
             );
@@ -61,28 +61,35 @@
         function getById(id) {
             var deferred = $q.defer();
             crudService.find(id, 'tests', 'id').then(
-                function(tests) {
+                function (tests) {
                     deferred.resolve(tests[0]);
-                }, function(err) {
+                }, function (err) {
                     deferred.reject(err);
                 }
             );
             return deferred.promise;
         }
 
-        function getAllTestsAndUsers() {
+        function getAllTestsAndUsers(filter) {
             var deferred = $q.defer();
             try {
+                if (filter) {
+                    if (filter.dateFrom && filter.dateTo) {
+                        var where = dbService.tests.completedOn.between(filter.dateFrom, filter.dateTo);
+                    } else {
+                        var where = dbService.tests.completedOn.isNotNull();
+                    }
+                }
                 dbService.db.select()
                     .from(dbService.tests)
                     .innerJoin(dbService.users, dbService.tests.userId.eq(dbService.users.id))
-                    .where(dbService.tests.completedOn.isNotNull())
+                    .where(where)
                     .exec().then(
-                        function(tests) {
-                            deferred.resolve(tests);
-                        }, function(err) {
-                            deferred.reject(err);
-                        }
+                    function (tests) {
+                        deferred.resolve(tests);
+                    }, function (err) {
+                        deferred.reject(err);
+                    }
                     );
             } catch (err) {
                 deferred.reject(err);
@@ -98,11 +105,11 @@
                     .innerJoin(dbService.users, dbService.tests.userId.eq(dbService.users.id))
                     .where(dbService.tests.id.eq(id))
                     .exec().then(
-                        function(test) {
-                            deferred.resolve(test[0]);
-                        }, function(err) {
-                            deferred.reject(err);
-                        }
+                    function (test) {
+                        deferred.resolve(test[0]);
+                    }, function (err) {
+                        deferred.reject(err);
+                    }
                     );
             } catch (err) {
                 deferred.reject(err);
@@ -113,9 +120,9 @@
         function removeAll() {
             var deferred = $q.defer();
             crudService.removeAll('tests').then(
-                function(result) {
+                function (result) {
                     deferred.resolve(result);
-                }, function(err) {
+                }, function (err) {
                     deferred.reject(err);
                 }
             );

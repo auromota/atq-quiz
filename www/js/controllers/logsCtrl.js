@@ -7,19 +7,25 @@
 
     app.controller('logsCtrl', logsCtrl);
 
-    logsCtrl.$inject = ['$scope', '$state', 'SweetAlert', 'testService'];
+    logsCtrl.$inject = ['$scope', '$state', 'SweetAlert', 'testService', 'dbService'];
 
-    function logsCtrl($scope, $state, SweetAlert, testService) {
+    function logsCtrl($scope, $state, SweetAlert, testService, dbService) {
+
+        $scope.maxCollapsed = true;
+        $scope.minCollapsed = true;
+        $scope.filter = {};
+        var range = {
+            dateFrom: undefined,
+            dateTo: undefined
+        }
 
         function loadTests() {
-            testService.getAllTestsAndUsers().then(function (tests) {
+            testService.getAllTestsAndUsers(range).then(function (tests) {
                 $scope.tests = tests;
             }, function (err) {
                 $state.go('home');
             });
         }
-
-        loadTests();
 
         $scope.clear = function () {
             var params = {
@@ -48,8 +54,17 @@
             $state.go('testDetails', { testId: id });
         }
 
-        $scope.maxCollapsed = true;
-        $scope.minCollapsed = true;
+        $scope.$watch('filter.dateFrom', function (newValue, oldValue) {
+            range.dateFrom = newValue;
+            loadTests();
+        });
+
+        $scope.$watch('filter.dateTo', function (newValue, oldValue) {
+            if (newValue) {
+                range.dateTo = new Date(1900 + newValue.getYear(), newValue.getMonth(), newValue.getDate(), 23, 59, 59)
+                loadTests();
+            }
+        });
 
     }
 
