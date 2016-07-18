@@ -2,7 +2,7 @@
     Author: Auro Mota <auro@blueorc.com>
 */
 
-(function() {
+(function () {
     'use strict';
 
     app.controller('appCtrl', appCtrl);
@@ -13,17 +13,17 @@
         $scope.user = {};
         $scope.test = {};
 
-        $scope.$on('userSelected', function(event, user) {
+        $scope.$on('userSelected', function (event, user) {
             $scope.user = angular.copy(user);
             getUserTests();
         });
 
-        $scope.$on('questionAnswered', function(event, answer) {
+        $scope.$on('questionAnswered', function (event, answer) {
             $scope.answers.forEach(updateAnswer);
             pickAnotherQuestion();
 
             function updateAnswer(a, i) {
-                if(a.id == answer.id) {
+                if (a.id == answer.id) {
                     $scope.answers[i] = angular.copy(answer);
                 }
             }
@@ -43,8 +43,8 @@
                 confirmButtonText: 'Continuar',
                 confirmButtonColor: '#2c3e50'
             };
-            SweetAlert.swal(params, function(isConfirm) {
-                if(isConfirm) {
+            SweetAlert.swal(params, function (isConfirm) {
+                if (isConfirm) {
                     loadTest(testId);
                 } else {
                     restartTest(testId);
@@ -54,7 +54,7 @@
 
         function checkTests(tests) {
             var testId = checkForIncompleteTests(tests);
-            if(testId) {
+            if (testId) {
                 continueTest(testId);
             } else {
                 showNewTest();
@@ -78,7 +78,7 @@
             return testId;
 
             function checkTest(test) {
-                if(!test.completedOn) {
+                if (!test.completedOn) {
                     testId = test.id;
                 }
             }
@@ -89,7 +89,7 @@
         }
 
         function loadAnswers(test) {
-            if(test) {
+            if (test) {
                 $scope.test = angular.copy(test);
                 answerService.getByTestId(test.id).then(goToAnswers);
             }
@@ -113,7 +113,7 @@
                 userId: $scope.user.id
             }
             testService.add($scope.test).then(
-                function(test) {
+                function (test) {
                     $scope.test = angular.copy(test);
                     addRandomQuestionsToTest();
                 }
@@ -121,16 +121,16 @@
         }
 
         function addRandomQuestionsToTest() {
-            questionService.getAll().then(
-                function(questions) {
+            questionService.getAllByStatus(true).then(
+                function (questions) {
                     var positions = utilService.generateRandomArray(questions.length);
                     var answers = [];
-                    positions.forEach(function(pos, i) {
+                    positions.forEach(function (pos, i) {
                         var answer = {
                             testId: $scope.test.id,
                             questionId: questions[pos].id,
                             time: 0,
-                            order: i+1
+                            order: i + 1
                         }
                         answers.push(answer);
                     })
@@ -145,15 +145,15 @@
                 id: $scope.test.id,
                 total: $scope.answers.length
             };
-            testService.update(test).then(function() {
+            testService.update(test).then(function () {
                 goToQuestion(answers[0].id);
             });
         }
 
         function goToQuestion(answerId) {
             var answeredCount = 0;
-            $scope.answers.forEach(function(answer) {
-                if(answer.answer) {
+            $scope.answers.forEach(function (answer) {
+                if (answer.answer) {
                     answeredCount++;
                 }
             })
@@ -168,15 +168,15 @@
         function pickAnotherQuestion() {
             var id;
             var i = 0;
-            if($scope.answers.length) {
-                while(!id) {
-                    if(i >= $scope.answers.length) break;
-                    if($scope.answers[i].answer == null) {
+            if ($scope.answers.length) {
+                while (!id) {
+                    if (i >= $scope.answers.length) break;
+                    if ($scope.answers[i].answer == null) {
                         id = $scope.answers[i].id;
                     }
                     i++;
                 }
-                if(id) {
+                if (id) {
                     goToQuestion(id);
                 } else {
                     endTest();
@@ -188,8 +188,8 @@
 
         function countRightAnswers() {
             var rightCount = 0;
-            $scope.answers.forEach(function(answer) {
-                if(answer.right) {
+            $scope.answers.forEach(function (answer) {
+                if (answer.right) {
                     rightCount++;
                 }
             });
@@ -209,7 +209,7 @@
         }
 
         function goToTestCompleted() {
-            $state.go('testCompleted', {testId: $scope.test.id});
+            $state.go('testCompleted', { testId: $scope.test.id });
         }
 
     }

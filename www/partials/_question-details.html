@@ -1,0 +1,22 @@
+<!--
+    Author: Auro Mota <auro@blueorc.com>
+-->
+
+<ul class="breadcrumb">
+    <li><a ui-sref="home">Início</a></li>
+    <li><a ui-sref="settings">Configurações</a></li>
+    <li class="active">Pergunta</li>
+</ul>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Pergunta</h3>
+    </div>
+    <div class="panel-body">
+        <p><strong>Pergunta:</strong> {{question.text}}</p>
+        <p><strong>Alternativa 1:</strong> {{question.firstAnswer}}</p>
+        <p><strong>Alternativa 2:</strong> {{question.secondAnswer}}</p>
+        <p><strong>Alternativa 3:</strong> {{question.thirdAnswer}}</p>
+        <p><strong>Alternativa 4:</strong> {{question.fourthAnswer}}</p>
+    </div>
+</div>

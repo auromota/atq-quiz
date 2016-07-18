@@ -2,7 +2,7 @@
     Author: Auro Mota <auro@blueorc.com>
 */
 
-(function() {
+(function () {
     'use strict';
 
     var users = {
@@ -21,7 +21,8 @@
             { name: 'secondAnswer', type: lf.Type.STRING },
             { name: 'thirdAnswer', type: lf.Type.STRING },
             { name: 'fourthAnswer', type: lf.Type.STRING },
-            { name: 'rightAnswer', type: lf.Type.INTEGER }
+            { name: 'rightAnswer', type: lf.Type.INTEGER },
+            { name: 'status', type: lf.Type.BOOLEAN }
         ],
         primaryKeys: [{ column: 'id', isAutoIncrement: true }]
     };
@@ -49,7 +50,7 @@
             { name: 'time', type: lf.Type.NUMBER },
             { name: 'order', type: lf.Type.INTEGER }
         ],
-        primaryKeys: [{column: 'id', isAutoIncrement: true}],
+        primaryKeys: [{ column: 'id', isAutoIncrement: true }],
         foreignKeys: [
             { name: 'fkTestId', column: 'testId', ref: 'tests.id', action: lf.ConstraintAction.CASCADE },
             { name: 'fkQuestionId', column: 'questionId', ref: 'questions.id', action: lf.ConstraintAction.CASCADE }

@@ -2,7 +2,7 @@
     Author: Auro Mota <auro@blueorc.com>
 */
 
-(function() {
+(function () {
     'use strict';
 
     app.factory('questionService', questionService);
@@ -12,7 +12,8 @@
     function questionService($q, dbService, crudService) {
         var service = {
             getAll: getAll,
-            getById: getById
+            getById: getById,
+            getAllByStatus: getAllByStatus
         }
 
         return service;
@@ -20,9 +21,9 @@
         function getAll() {
             var deferred = $q.defer();
             crudService.findAll('questions').then(
-                function(questions) {
+                function (questions) {
                     deferred.resolve(questions);
-                }, function(err) {
+                }, function (err) {
                     deferred.reject(err);
                 }
             );
@@ -32,9 +33,21 @@
         function getById(id) {
             var deferred = $q.defer();
             crudService.find(id, 'questions', 'id').then(
-                function(questions) {
+                function (questions) {
                     deferred.resolve(questions);
-                }, function(err) {
+                }, function (err) {
+                    deferred.reject(err);
+                }
+            );
+            return deferred.promise;
+        }
+
+        function getAllByStatus(status) {
+            var deferred = $q.defer();
+            crudService.find(status, 'questions', 'status').then(
+                function (questions) {
+                    deferred.resolve(questions);
+                }, function (err) {
                     deferred.reject(err);
                 }
             );
