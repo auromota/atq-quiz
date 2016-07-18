@@ -14,6 +14,8 @@
         $scope.maxCollapsed = true;
         $scope.minCollapsed = true;
         $scope.filter = {};
+        $scope.results = null;
+
         var range = {
             dateFrom: undefined,
             dateTo: undefined
@@ -21,10 +23,55 @@
 
         function loadTests() {
             testService.getAllTestsAndUsers(range).then(function (tests) {
+                if (tests && tests.length) {
+                    updateResults(tests);
+                } else {
+                    $scope.results = null;
+                }
                 $scope.tests = tests;
             }, function (err) {
                 $state.go('home');
             });
+        }
+
+        function updateResults(tests) {
+            var sumPercentage = 0;
+            var max = {
+                tests: {
+                    percentage: -1
+                }
+            };
+            var min = {
+                tests: {
+                    percentage: 101
+                }
+            }
+
+            tests.forEach(calculate);
+
+            $scope.results = {
+                average: sumPercentage / tests.length,
+                minTest: min,
+                maxTest: max
+            };
+
+            function calculate(test) {
+                sumPercentage += test.tests.percentage;
+                checkMax(test);
+                checkMin(test);
+            }
+
+            function checkMin(test) {
+                if (test.tests.percentage < min.tests.percentage) {
+                    min = test;
+                }
+            }
+
+            function checkMax(test) {
+                if (test.tests.percentage > max.tests.percentage) {
+                    max = test;
+                }
+            }
         }
 
         $scope.clear = function () {

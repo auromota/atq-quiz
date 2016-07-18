@@ -12,35 +12,35 @@
         <h3 class="panel-title">Relatórios</h3>
     </div>
     <div class="panel-body">
-        <div class="row">
+        <div class="row" ng-show="results">
             <div class="col-lg-4 result-logs">
                 <h4>Média de acertos:</h4>
-                <div class="score">77%</div>
+                <div class="score">{{results.average | number: 1}}%</div>
             </div>
             <div class="col-lg-4 result-logs">
                 <h4>Maior pontuação:</h4>
                 <div class="result-box">
-                    <span class="score">91%</span>
+                    <span class="score">{{results.maxTest.tests.percentage | number: 1}}%</span>
                     <span class="expand glyphicon" ng-class="{'glyphicon-triangle-bottom': maxCollapsed, 'glyphicon-triangle-top': !maxCollapsed}"
                         ng-click="maxCollapsed = !maxCollapsed"></span>
                 </div>
                 <div uib-collapse="maxCollapsed" class="well">
-                    <p><strong>Matrícula:</strong> 9951</p>
-                    <p><strong>Usuário:</strong> Auro Felipe Sampaio Mota</p>
-                    <p><strong>Duração do teste:</strong> 50 s</p>
+                    <p><strong>Matrícula:</strong> {{results.maxTest.users.id}}</p>
+                    <p><strong>Usuário:</strong> {{results.maxTest.users.name}}</p>
+                    <p><strong>Feito em:</strong> {{results.maxTest.tests.completedOn | date: 'dd/MM/yyyy - HH:mm'}}</p>
                 </div>
             </div>
             <div class="col-lg-4 result-logs">
                 <h4>Menor pontuação:</h4>
                 <div class="result-box">
-                    <span class="score">43%</span>
+                    <span class="score">{{results.minTest.tests.percentage | number: 1}}%</span>
                     <span class="expand glyphicon" ng-class="{'glyphicon-triangle-bottom': minCollapsed, 'glyphicon-triangle-top': !minCollapsed}"
                         ng-click="minCollapsed = !minCollapsed"></span>
                 </div>
                 <div uib-collapse="minCollapsed" class="well">
-                    <p><strong>Matrícula:</strong> 9951</p>
-                    <p><strong>Usuário:</strong> Auro Felipe Sampaio Mota</p>
-                    <p><strong>Duração do teste:</strong> 50 s</p>
+                    <p><strong>Matrícula:</strong> {{results.minTest.users.id}}</p>
+                    <p><strong>Usuário:</strong> {{results.minTest.users.name}}</p>
+                    <p><strong>Feito em:</strong> {{results.minTest.tests.completedOn | date: 'dd/MM/yyyy - HH:mm'}}</p>
                 </div>
             </div>
         </div>
