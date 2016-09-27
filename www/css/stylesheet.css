@@ -1,7 +1,16 @@
+@font-face {
+font-family: 'Intro';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/Intro/Intro-Bold-Italic.otf');
+}
 /*
     Author: Auro Mota <auro@blueorc.com>
 */
 
+body{
+    overflow: hidden;
+}
 .jumbotron-btns a:not(:first-child) {
     margin-left: 10px;
 }
@@ -9,6 +18,32 @@
 .btn-test {
     margin-top: 20px;
     margin-bottom: -20px !important;
+}
+
+.btn-success{
+    font-family:'Intro';
+    background: #5C89C1 !important;
+    border: solid 1px #2C64A2 !important;
+}
+
+.btn-success:hover{
+    background:  #2C64A2 !important;
+    border: solid 1px #5C89C1 !important;
+}
+
+.btn{
+    font-family:'Intro';
+}
+
+.title1{
+    font-family: 'Intro';
+    font-weight: 900;
+    color: #2C64A2;
+    font-size: 38px;
+}
+
+p{
+    font-family: Arial;
 }
 
 .result {
@@ -54,4 +89,33 @@
 
 .result-box {
     position: relative;
+}
+.center-component{
+    float:none;
+    margin: 0 auto;
+}
+
+.container-intro{
+    position: relative;
+    top: 0px;
+}
+.cascos_inferiores{
+    width: 40%;
+    position:absolute;
+    top:30%;
+    left:-5%;
+}
+.cascos_inferiores_2{
+    width: 40%;
+    position:absolute;
+    top:30%;
+    left:60%;
+}
+.cascos_superiores{
+    width: 40%;
+    position:absolute;
+    left:70%;
+}
+.breadcrumb{
+    background: none !important;    
 }
