@@ -13,16 +13,21 @@
 
         $scope.maxCollapsed = true;
         $scope.minCollapsed = true;
-        $scope.filter = {};
+        $scope.filter = {
+            wcm: true,
+            qsa: true
+        };
         $scope.results = null;
 
-        var range = {
+        var filter = {
             dateFrom: undefined,
-            dateTo: undefined
+            dateTo: undefined,
+            wcm: true,
+            qsa: true
         }
 
         function loadTests() {
-            testService.getAllTestsAndUsers(range).then(function (tests) {
+            testService.getAllTestsAndUsers(filter).then(function (tests) {
                 if (tests && tests.length) {
                     updateResults(tests);
                 } else {
@@ -79,16 +84,30 @@
         }
 
         $scope.$watch('filter.dateFrom', function (newValue, oldValue) {
-            range.dateFrom = newValue;
+            filter.dateFrom = newValue;
             loadTests();
         });
 
         $scope.$watch('filter.dateTo', function (newValue, oldValue) {
             if (newValue) {
-                range.dateTo = new Date(1900 + newValue.getYear(), newValue.getMonth(), newValue.getDate(), 23, 59, 59)
+                filter.dateTo = new Date(1900 + newValue.getYear(), newValue.getMonth(), newValue.getDate(), 23, 59, 59)
                 loadTests();
             }
         });
+
+        $scope.$watch('filter.wcm', function (newValue) {
+            if (newValue != undefined) {
+                filter.wcm = newValue;
+                loadTests();
+            }
+        })
+
+        $scope.$watch('filter.qsa', function (newValue) {
+            if (newValue != undefined) {
+                filter.qsa = newValue;
+                loadTests();
+            }
+        })
 
     }
 
