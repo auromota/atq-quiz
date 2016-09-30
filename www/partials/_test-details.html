@@ -17,7 +17,6 @@
         <p><strong>Usuário:</strong> {{data.user.name}}</p>
         <p><strong>Desempenho:</strong> {{data.test.percentage | number: 2}}% ({{data.test.right}} acertos em {{data.test.total}} perguntas)</p>
         <p><strong>Duração do teste:</strong> {{totalTime | number: 2}} s</p>
-        <div google-chart chart="questionTimeChart"></div>
         <strong>Perguntas do teste:</strong>
         <p ng-repeat="answer in data.answers">
             <strong>Questão {{answer.order}}: {{answer.question.text}}</strong>

@@ -8,9 +8,20 @@ src: url('fonts/Intro/Intro-Bold-Italic.otf');
     Author: Auro Mota <auro@blueorc.com>
 */
 
-body{
-    overflow: hidden;
+.background {
+    background-image: url('../img/bottom-left.png'), url('../img/top-right.png');
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: left bottom, right top;
 }
+
+.background2 {
+    background-image: url('../img/bottom-right.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+}
+
 .jumbotron-btns a:not(:first-child) {
     margin-left: 10px;
 }
@@ -59,7 +70,9 @@ p{
 }
 
 .right-answer {
-	color: #22B14C;
+    border-radius: 3px 3px;
+    background-color: snow;
+    border: 3px solid green;
 }
 
 .red-answer {

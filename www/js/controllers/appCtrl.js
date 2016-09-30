@@ -13,6 +13,7 @@
         $scope.user = {};
         $scope.test = {};
         $scope.theme;
+        $scope.background = 'background';
 
         $scope.$on('testSelected', function (event, data) {
             $scope.user = angular.copy(data.user);
@@ -30,6 +31,10 @@
                 }
             }
         });
+
+        function initTest() {
+            $scope.background = 'background2';
+        }
 
         function getUserTests(theme) {
             testService.getByUserIdAndTheme($scope.user.id, theme).then(checkTests);
@@ -155,6 +160,7 @@
 
         function goToQuestion(answerId) {
             var answeredCount = 0;
+            initTest();
             $scope.answers.forEach(function (answer) {
                 if (answer.answer) {
                     answeredCount++;
@@ -212,6 +218,7 @@
         }
 
         function goToTestCompleted() {
+            $scope.background = 'background';
             $state.go('testCompleted', { testId: $scope.test.id });
         }
 

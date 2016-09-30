@@ -8,41 +8,39 @@
     <li class="active">Perguntas</li>
 </ul>
 
-<img src="img/cascos_inferiores_2.jpg" alt="" class="cascos_inferiores_2">
 <div class="container">
     <audio src="audio/correct.mp3" id="audio-correct"></audio>
     <audio src="audio/wrong.mp3" id="audio-wrong"></audio>
-    <br><br>
-    {{question.text}}
+    <br><br> {{question.text}}
     <br><br>
     <form class="form-horizontal" ng-submit="submit()">
         <fieldset>
             <div class="form-group">
                 <div class="col-lg-12">
                     <div class="radio">
-                        <label>
+                        <label ng-class="{'right-answer': firstAnswerRight}">
                             <input type="radio" ng-model="answer.answer" value="1">{{question.firstAnswer}}
                         </label>
                     </div>
                     <div class="radio">
-                        <label>
+                        <label ng-class="{'right-answer': secondAnswerRight}">
                             <input type="radio" ng-model="answer.answer" value="2">{{question.secondAnswer}}
                         </label>
                     </div>
                     <div class="radio">
-                        <label>
+                        <label ng-class="{'right-answer': thirdAnswerRight}">
                             <input type="radio" ng-model="answer.answer" value="3">{{question.thirdAnswer}}
                         </label>
                     </div>
                     <div class="radio">
-                        <label>
+                        <label ng-class="{'right-answer': fourthAnswerRight}">
                             <input type="radio" ng-model="answer.answer" value="4">{{question.fourthAnswer}}
                         </label>
                     </div>
                     <br><br>
                     <div class="form-group">
                         <div class="">
-                            <button type="submit" class="btn btn-success" ng-disabled="hasAnswered">Responder</button>
+                            <button type="submit" class="btn btn-success" ng-disabled="enableButton">{{confirmBtn}}</button>
                         </div>
                     </div>
                 </div>
@@ -53,6 +51,4 @@
     <div class="progress">
         <div class="progress-bar progress-bar-info" wq-progress-bar="left"></div>
     </div>
-    <br><br><br><br><br><br><br>
-    <button class="btn btn-danger">Desistir</button>
 </div>

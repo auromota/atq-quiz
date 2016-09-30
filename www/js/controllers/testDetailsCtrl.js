@@ -2,7 +2,7 @@
     Author: Auro Mota <auro@blueorc.com>
 */
 
-(function() {
+(function () {
     'use strict';
 
     app.controller('testDetailsCtrl', testDetailsCtrl);
@@ -12,11 +12,6 @@
     function testDetailsCtrl($scope, $state, testService, answerService, questionService) {
 
         $scope.data = {};
-
-        $scope.questionTimeChart = {
-            type: 'ColumnChart',
-            displayed: false
-        };
 
         function loadTest(id) {
             testService.getTestAndUser(id).then(loadAnswers, redirect);
@@ -39,7 +34,6 @@
         }
 
         function loadData() {
-            loadQuestionTimeChart();
             calculateTotalTime();
         }
 
@@ -54,53 +48,14 @@
         }
 
         function loadQuestion(answer) {
-            questionService.getById(answer.questionId).then(function(questions) {
-                if(questions) {
+            questionService.getById(answer.questionId).then(function (questions) {
+                if (questions) {
                     answer.question = questions[0];
                 }
             });
         }
 
-        function getQuestionTimeChartRows() {
-            var rows = [];
-            $scope.data.answers.forEach(function(answer) {
-                var row = {
-                    c: [
-                        {v: 'Questão ' + answer.order},
-                        {v: answer.time}
-                    ]
-                };
-                rows.push(row);
-            });
-            return rows;
-        }
-
-
-        function loadQuestionTimeChart() {
-            var data = {
-                cols: [
-                    {id: 'question', label: 'Questão', type: 'string'},
-                    {id: 'time', label: 'Tempo', type: 'number'}
-                ],
-                rows: getQuestionTimeChartRows()
-            }
-            $scope.questionTimeChart.data = data;
-            $scope.questionTimeChart.options = {
-                title: 'Duração por questão',
-                colors: ['#2c3e50'],
-                vAxis: {
-                    title: 'Tempo',
-                    gridlines: {
-                        count: 10
-                    }
-                },
-                hAxis: {
-                    title: 'Questão'
-                }
-            }
-        }
-
-        if($state.params.testId) {
+        if ($state.params.testId) {
             loadTest($state.params.testId)
         } else {
             $state.go('logs');
