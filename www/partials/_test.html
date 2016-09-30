@@ -1,54 +1,58 @@
 <!--
     Author: Auro Mota <auro@blueorc.com>
--->
 
+-->
 <ul class="breadcrumb">
-    <li><a ui-sref="home">Início</a></li>
+    <li><a ui-sref="home">Home</a></li>
     <li><a ui-sref="credentials">Identificação</a></li>
-    <li class="active">Teste</li>
+    <li class="active">Perguntas</li>
 </ul>
 
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        <h3 class="panel-title">{{question.text}}</h3>
-    </div>
-    <div class="panel-body">
-        <form class="form-horizontal" ng-submit="submit()">
-            <fieldset>
-                <div class="form-group">
-                    <div class="col-lg-12">
-                        <div class="radio">
-                            <label ng-class="{'right-answer': firstAnswerRight}">
-                                <input type="radio" ng-model="answer.answer" value="1">{{question.firstAnswer}}
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label ng-class="{'right-answer': secondAnswerRight}">
-                                <input type="radio" ng-model="answer.answer" value="2">{{question.secondAnswer}}
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label ng-class="{'right-answer': thirdAnswerRight}">
-                                <input type="radio" ng-model="answer.answer" value="3">{{question.thirdAnswer}}
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label ng-class="{'right-answer': fourthAnswerRight}">
-                                <input type="radio" ng-model="answer.answer" value="4">{{question.fourthAnswer}}
-                            </label>
-                        </div>
+<img src="img/cascos_inferiores_2.jpg" alt="" class="cascos_inferiores_2">
+<div class="container">
+    <audio src="audio/correct.mp3" id="audio-correct"></audio>
+    <audio src="audio/wrong.mp3" id="audio-wrong"></audio>
+    <br><br>
+    {{question.text}}
+    <br><br>
+    <form class="form-horizontal" ng-submit="submit()">
+        <fieldset>
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="answer.answer" value="1">{{question.firstAnswer}}
+                        </label>
                     </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="answer.answer" value="2">{{question.secondAnswer}}
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="answer.answer" value="3">{{question.thirdAnswer}}
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" ng-model="answer.answer" value="4">{{question.fourthAnswer}}
+                        </label>
+                    </div>
+                    <br><br>
                     <div class="form-group">
-                        <div class="col-lg-2 col-lg-offset-10">
-                            <button type="submit" class="btn btn-primary btn-test" ng-disabled="enableButton">{{confirmBtn}}</button>
+                        <div class="">
+                            <button type="submit" class="btn btn-success" ng-disabled="hasAnswered">Responder</button>
                         </div>
                     </div>
                 </div>
-            </fieldset>
-        </form>
-    </div>
+            </div>
+        </fieldset>
+    </form>
 
     <div class="progress">
         <div class="progress-bar progress-bar-info" wq-progress-bar="left"></div>
     </div>
+    <br><br><br><br><br><br><br>
+    <button class="btn btn-danger">Desistir</button>
 </div>
