@@ -32,9 +32,13 @@
             }
         });
 
-        function initTest() {
+        $scope.$on('testLeft', function (event) {
+            $scope.background = 'background';
+        });
+
+        $scope.$on('testInitialized', function(event) {
             $scope.background = 'background2';
-        }
+        });
 
         function getUserTests(theme) {
             testService.getByUserIdAndTheme($scope.user.id, theme).then(checkTests);
@@ -160,7 +164,6 @@
 
         function goToQuestion(answerId) {
             var answeredCount = 0;
-            initTest();
             $scope.answers.forEach(function (answer) {
                 if (answer.answer) {
                     answeredCount++;

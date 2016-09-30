@@ -14,7 +14,12 @@
         var user = securityService.getUser();
         var time = 0;
         var hasAnswered = false;
-        $scope.$broadcast('testInitialized');
+        $rootScope.$broadcast('testInitialized');
+
+        $scope.go = function (state) {
+            $rootScope.$broadcast('testLeft');
+            $state.go(state);
+        }
 
         $scope.firstAnswerRight = '';
         $scope.secondAnswerRight = '';
