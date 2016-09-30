@@ -15,7 +15,9 @@
     <div class="panel-body">
         <p><strong>Matrícula:</strong> {{data.user.id}}</p>
         <p><strong>Usuário:</strong> {{data.user.name}}</p>
-        <p><strong>Desempenho:</strong> {{data.test.percentage | number: 2}}% ({{data.test.right}} acertos em {{data.test.total}} perguntas)</p>
+        <p><strong>Desempenho:</strong> {{data.test.percentage | number: 2}}% ({{data.test.right}} acertos em {{data.test.total}}
+            perguntas)</p>
+        <p><strong>Tema:</strong> {{data.test.theme == 1 ? 'WCM – Controle de Qualidade' : 'Qualidade e Segurança de Alimentos'}}</p>
         <p><strong>Duração do teste:</strong> {{totalTime | number: 2}} s</p>
         <strong>Perguntas do teste:</strong>
         <p ng-repeat="answer in data.answers">
@@ -25,4 +27,3 @@
         </p>
     </div>
 </div>
-
