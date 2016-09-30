@@ -27,6 +27,8 @@
                 <div uib-collapse="maxCollapsed" class="well">
                     <p><strong>Matrícula:</strong> {{results.maxTest.users.id}}</p>
                     <p><strong>Usuário:</strong> {{results.maxTest.users.name}}</p>
+                    <p><strong>Tema:</strong> {{results.maxTest.tests.theme == 1 ? 'WCM – Controle de Qualidade' : 'Qualidade
+                        e Segurança de Alimentos'}}</p>
                     <p><strong>Feito em:</strong> {{results.maxTest.tests.completedOn | date: 'dd/MM/yyyy - HH:mm'}}</p>
                 </div>
             </div>
@@ -40,13 +42,20 @@
                 <div uib-collapse="minCollapsed" class="well">
                     <p><strong>Matrícula:</strong> {{results.minTest.users.id}}</p>
                     <p><strong>Usuário:</strong> {{results.minTest.users.name}}</p>
+                    <p><strong>Tema:</strong> {{results.minTest.tests.theme == 1 ? 'WCM – Controle de Qualidade' : 'Qualidade
+                        e Segurança de Alimentos'}}</p>
                     <p><strong>Feito em:</strong> {{results.minTest.tests.completedOn | date: 'dd/MM/yyyy - HH:mm'}}</p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-4">
                 <h3>Testes realizados</h3>
+            </div>
+            <div class="col-lg-4">
+                Tema<br>
+                <input type="checkbox" ng-model="filter.wcm">WCM - Controle de Qualidade<br>
+                <input type="checkbox" ng-model="filter.qsa">Qualidade e Segurança de Alimentos
             </div>
             <div class="col-lg-2">
                 De
@@ -65,6 +74,7 @@
                         <th>Nome</th>
                         <th>Porcentagem de acerto</th>
                         <th>Feito em</th>
+                        <th>Tema</th>
                         <th>Detalhes</th>
                     </tr>
                 </thead>
@@ -77,6 +87,7 @@
                         <td>{{test.users.name}}</td>
                         <td>{{test.tests.percentage | number: 0}}%</td>
                         <td>{{test.tests.completedOn | date: 'dd/MM/yyyy - HH:mm'}}</td>
+                        <td>{{test.tests.theme == 1 ? 'WCM – Controle de Qualidade' : 'Qualidade e Segurança de Alimentos'}}</td>
                         <td ng-click="details(test.tests.id)"><span class="glyphicon glyphicon-info-sign mouse-link"></span></td>
                     </tr>
                 </tbody>

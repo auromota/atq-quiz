@@ -102,6 +102,18 @@
                     } else {
                         var where = dbService.tests.completedOn.isNotNull();
                     }
+                    var or = null;
+                    if (filter.wcm && filter.qsa) {
+                        where = lf.op.and(where, lf.op.or(dbService.tests.theme.eq(1), dbService.tests.theme.eq(2)));
+                    } else {
+                        if (filter.wcm) {
+                            var where = lf.op.and(where, dbService.tests.theme.eq(1));
+                        } else if (filter.qsa) {
+                            var where = lf.op.and(where, dbService.tests.theme.eq(2));
+                        } else {
+                            var where = lf.op.and(where, lf.op.and(dbService.tests.theme.neq(1), dbService.tests.theme.neq(2)));
+                        }
+                    }
                 }
                 dbService.db.select()
                     .from(dbService.tests)
