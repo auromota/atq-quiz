@@ -62,7 +62,7 @@ a{
 
 /* TIPOGRAFIA */
 .title1{
-	font-family: 'Open Sans',
+	font-family: 'Open Sans';
 	font-size: 36px;
 	color: #2664A2;
 }

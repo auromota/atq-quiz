@@ -58,6 +58,10 @@ p{
     color: green;
 }
 
+.right-answer {
+	color: #22B14C;
+}
+
 .red-answer {
     color: red;
 }

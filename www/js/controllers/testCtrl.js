@@ -2,7 +2,7 @@
     Author: Auro Mota <auro@blueorc.com>
 */
 
-(function() {
+(function () {
     'use strict';
 
     app.controller('testCtrl', testCtrl);
@@ -13,17 +13,24 @@
 
         var user = securityService.getUser();
         var time = 0;
+        var hasAnswered = false;
 
-        if(user.id) {
+        $scope.firstAnswerRight = '';
+        $scope.secondAnswerRight = '';
+        $scope.thirdAnswerRight = '';
+        $scope.fourthAnswerRight = '';
+        $scope.confirmBtn = 'Responder';
+
+        if (user.id) {
             loadAnswers();
         } else {
             $state.go('home');
         }
 
-        $scope.hasAnswered = false;
+        $scope.enableButton = false;
 
         function loadAnswers() {
-            if($stateParams.answerId) {
+            if ($stateParams.answerId) {
                 var id = parseInt($stateParams.answerId);
                 answerService.getById(id).then(loadQuestion);
             } else {
@@ -32,14 +39,14 @@
         }
 
         function loadQuestion(answers) {
-            if(answers.length) {
+            if (answers.length) {
                 $scope.answer = answers[0];
                 questionService.getById($scope.answer.questionId).then(updateProgressBar);
             }
         }
 
         function updateProgressBar(questions) {
-            if(questions.length) {
+            if (questions.length) {
                 $scope.question = questions[0];
                 var percentage = utilService.getPercetange($state.params.answered, $state.params.total);
                 $scope.$emit('percentageReady', percentage);
@@ -48,8 +55,8 @@
         }
 
         function startTimeCounter() {
-            $interval(function() {
-                time+=0.005;
+            $interval(function () {
+                time += 0.005;
             }, 5);
         }
 
@@ -58,38 +65,61 @@
         }
 
         function checkAnswer() {
-            if(!$scope.answer.answer) return null;
+            if (!$scope.answer.answer) return null;
             var answer = parseInt($scope.answer.answer);
-            if(answer === $scope.question.rightAnswer) {
+            if (answer === $scope.question.rightAnswer) {
                 return true;
             }
             return false;
         }
 
-        $scope.submit = function() {
-            var answer = checkAnswer();
-            if(answer !== null) {
-                $scope.hasAnswered = true;
-                getTime();
-                $scope.answer.right = checkAnswer();
-                answerService.update($scope.answer).then(showResult);
+        $scope.submit = function () {
+            if (hasAnswered) {
+                $rootScope.$broadcast('questionAnswered', $scope.answer);
+            } else {
+                var answer = checkAnswer();
+                if (answer !== null) {
+                    hasAnswered = true;
+                    $scope.enableButton = true;
+                    getTime();
+                    $scope.answer.right = checkAnswer();
+                    answerService.update($scope.answer).then(showResult);
+                }
             }
         }
 
         function showResult() {
             var params = {};
-            if($scope.answer.right) {
+            if ($scope.answer.right) {
                 params.title = 'Parabéns!';
                 params.text = 'Você acertou a questão.';
                 params.type = 'success';
                 params.confirmButtonColor = '#2c3e50';
+                SweetAlert.swal(params, doBroadcast);
             } else {
                 params.title = 'Que pena!';
                 params.text = 'Você errou a questão.';
                 params.type = 'error';
                 params.confirmButtonColor = '#2c3e50';
+                SweetAlert.swal(params, showRightAnswer)
             }
-            SweetAlert.swal(params, doBroadcast);
+        }
+
+        function showRightAnswer() {
+            switch ($scope.question.rightAnswer) {
+                case 1: $scope.firstAnswerRight = true;
+                    break;
+                case 2: $scope.secondAnswerRight = true;
+                    break;
+                case 3: $scope.thirdAnswerRight = true;
+                    break;
+                case 4: $scope.fourthAnswerRight = true;
+                    break;
+                default:
+                    break;
+            }
+            $scope.confirmBtn = 'Continuar';
+            $scope.enableButton = false;
         }
 
         function doBroadcast() {
