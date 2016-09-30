@@ -1,18 +1,27 @@
 <!--
     Author: Auro Mota <auro@blueorc.com>
 -->
-
+<style>
+.cascos_superiores{
+    top:-10%;
+}    
+</style>
 <ul class="breadcrumb">
     <li><a ui-sref="home">Início</a></li>
     <li><a ui-sref="credentials">Identificação</a></li>
     <li class="active">Resultado</li>
 </ul>
-
-<div class="container result">
-    <h3>Teste completo!</h3>
+<img src="img/cascos_inferiores.png" alt="" class="cascos_inferiores">
+<img src="img/cascos_superiores.png" alt="" class="cascos_superiores">
+<div class="container result text-center container-intro">
+    <h3 class="title1">Teste completo!</h3>
     <p>Você acertou <strong>{{rightCount}}</strong> de <strong>{{total}}</strong> perguntas.</p>
     <div class="progress">
         <div class="progress-bar progress-bar-success" wq-progress-bar="left"></div>
         <div class="progress-bar progress-bar-danger" wq-progress-bar="right"></div>
     </div>
+    <br><br><br>
+    <img src="img/logotipo.png" alt="Quiz Unilever" title="Quiz Unilever">
+    <br><br><br><br>
+    <a ui-sref="home" class="btn btn-danger">Voltar</a>
 </div>

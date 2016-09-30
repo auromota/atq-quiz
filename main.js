@@ -15,7 +15,8 @@ app.on('window-all-closed', function () {
 });
 
 app.on('ready', function () {
-    win = new BrowserWindow({ width: 800, height: 600, show: false, minWidth: 800, minHeight: 600 });
+    // win = new BrowserWindow({ width: 800, height: 600, show: false, minWidth: 1365, minHeight: 768});
+    win = new BrowserWindow({ width: 1365, height: 768, show: false, minWidth: 1365, minHeight: 768});
     win.setMenu(null);
     win.loadURL('file://' + __dirname + '/www/index.html');
     win.show();

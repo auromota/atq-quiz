@@ -68,6 +68,6 @@
 
     app.constant('TABLE', tables);
 
-    app.constant('NUMBER_OF_QUESTIONS', 5);
+    app.constant('NUMBER_OF_QUESTIONS', 1);
 
 })();
