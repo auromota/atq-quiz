@@ -17,7 +17,8 @@
             getById: getById,
             getAllTestsAndUsers: getAllTestsAndUsers,
             getTestAndUser: getTestAndUser,
-            removeAll: removeAll
+            removeAll: removeAll,
+            getByUserIdAndTheme: getByUserIdAndTheme
         }
 
         return service;
@@ -43,6 +44,28 @@
                     deferred.reject(err);
                 }
             );
+            return deferred.promise;
+        }
+
+        function getByUserIdAndTheme(userId, theme) {
+            var deferred = $q.defer();
+            try {
+                dbService.db.select()
+                    .from(dbService.tests)
+                    .where(lf.op.and(
+                        dbService.tests.userId.eq(userId),
+                        dbService.tests.theme.eq(theme)
+                    ))
+                    .exec().then(
+                    function (tests) {
+                        deferred.resolve(tests);
+                    }, function (err) {
+                        deferred.reject(err);
+                    }
+                    );
+            } catch (err) {
+                deferred.reject(err);
+            }
             return deferred.promise;
         }
 

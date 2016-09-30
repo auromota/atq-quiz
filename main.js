@@ -7,19 +7,19 @@ const {BrowserWindow} = require('electron');
 
 let win = null;
 
-app.on('window-all-closed', function() {
+app.on('window-all-closed', function () {
     // if platform is Mac, ensure that only cmd + Q will quit
-    if(process.platform != 'darwin') {
+    if (process.platform != 'darwin') {
         app.quit();
     }
 });
 
-app.on('ready', function() {
-    win = new BrowserWindow({width: 800, height: 600, show: false});
+app.on('ready', function () {
+    win = new BrowserWindow({ width: 800, height: 600, show: false, minWidth: 800, minHeight: 600 });
     win.setMenu(null);
     win.loadURL('file://' + __dirname + '/www/index.html');
     win.show();
-    win.on('closed', function() {
+    win.on('closed', function () {
         mainWindow = null;
     });
 });

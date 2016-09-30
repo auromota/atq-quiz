@@ -49,17 +49,6 @@
                 url: '/logs/:testId',
                 templateUrl: 'partials/_test-details.html',
                 controller: 'testDetailsCtrl'
-            })
-            .state('questionDetails', {
-                url: '/settings/question/:id',
-                templateUrl: 'partials/_question-details.html',
-                controller: 'questionDetailsCtrl'
-            })
-            .state('settings', {
-                url: '/settings',
-                templateUrl: 'partials/_settings.html',
-                controller: 'settingsCtrl'
             });
-
     }
 })();

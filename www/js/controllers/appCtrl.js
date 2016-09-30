@@ -12,10 +12,12 @@
     function appCtrl($scope, $state, SweetAlert, testService, answerService, questionService, utilService) {
         $scope.user = {};
         $scope.test = {};
+        $scope.theme;
 
-        $scope.$on('userSelected', function (event, user) {
-            $scope.user = angular.copy(user);
-            getUserTests();
+        $scope.$on('testSelected', function (event, data) {
+            $scope.user = angular.copy(data.user);
+            $scope.theme = data.theme;
+            getUserTests($scope.theme);
         });
 
         $scope.$on('questionAnswered', function (event, answer) {
@@ -29,8 +31,8 @@
             }
         });
 
-        function getUserTests() {
-            testService.getByUserId($scope.user.id).then(checkTests);
+        function getUserTests(theme) {
+            testService.getByUserIdAndTheme($scope.user.id, theme).then(checkTests);
         }
 
         function continueTest(testId) {
@@ -110,7 +112,8 @@
 
         function createNewTest() {
             $scope.test = {
-                userId: $scope.user.id
+                userId: $scope.user.id,
+                theme: $scope.theme
             }
             testService.add($scope.test).then(
                 function (test) {
@@ -121,7 +124,7 @@
         }
 
         function addRandomQuestionsToTest() {
-            questionService.getAllByStatus(true).then(
+            questionService.getAllByStatusAndTheme(true, $scope.theme).then(
                 function (questions) {
                     var positions = utilService.generateRandomArray(questions.length);
                     var answers = [];

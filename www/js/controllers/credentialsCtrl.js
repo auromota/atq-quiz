@@ -12,45 +12,37 @@
     function credentialsCtrl($scope, $rootScope, $timeout, SweetAlert, userService, securityService) {
         $scope.user = {};
 
+        var WCM = 1;
+        var QSA = 2;
+
         $scope.submit = function () {
             var params = {
                 title: 'Pronto para começar?',
-                text: 'Bem-vindo, ' + $scope.user.name + '! Vamos testar seus conhecimentos. Bora lá? ;)',
+                text: 'Bem-vindo, ' + $scope.user.name + '! Qual tema deseja responder?',
                 imageUrl: './img/question.png',
                 showCancelButton: true,
-                cancelButtonText: 'Ainda não',
-                confirmButtonText: 'Iniciar',
+                cancelButtonText: 'WCM - Controle de Qualidade',
+                confirmButtonText: 'Qualidade e Segurança de Alimentos',
                 confirmButtonColor: '#2c3e50',
                 closeOnCancel: false,
                 closeOnConfirm: false
             };
             SweetAlert.swal(params, function (isConfirm) {
                 if (isConfirm) {
-                    confirmUser();
+                    confirmUser(QSA);
                 } else {
-                    showComeBackSoonMessage();
+                    confirmUser(WCM);
                 }
             });
         }
 
-        function confirmUser() {
+        function confirmUser(theme) {
             userService.save($scope.user).then(
                 function (user) {
                     securityService.login(user);
-                    $rootScope.$broadcast('userSelected', user);
+                    $rootScope.$broadcast('testSelected', { user: user, theme: theme });
                 }
             );
-        }
-
-        function showComeBackSoonMessage() {
-            var params = {
-                title: 'Ah! :(',
-                text: 'Esperamos que você volte em breve!',
-                type: 'error',
-                confirmButtonText: 'Pode deixar',
-                confirmButtonColor: '#2c3e50'
-            };
-            SweetAlert.swal(params);
         }
 
     }

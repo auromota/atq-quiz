@@ -13,7 +13,8 @@
         var service = {
             getAll: getAll,
             getById: getById,
-            getAllByStatus: getAllByStatus
+            getAllByStatus: getAllByStatus,
+            getAllByStatusAndTheme: getAllByStatusAndTheme
         }
 
         return service;
@@ -51,6 +52,28 @@
                     deferred.reject(err);
                 }
             );
+            return deferred.promise;
+        }
+
+        function getAllByStatusAndTheme(status, theme) {
+            var deferred = $q.defer();
+            try {
+                dbService.db.select()
+                    .from(dbService.questions)
+                    .where(lf.op.and(
+                        dbService.questions.status.eq(status),
+                        dbService.questions.theme.eq(theme)
+                    ))
+                    .exec().then(
+                    function (tests) {
+                        deferred.resolve(tests);
+                    }, function (err) {
+                        deferred.reject(err);
+                    }
+                    );
+            } catch (err) {
+                deferred.reject(err);
+            }
             return deferred.promise;
         }
     }
