@@ -31,6 +31,12 @@ html,body{
 	height: 100%;
 }
 
+#btn-logs{
+	*position:absolute;
+	top:80%;
+	left:80%;
+}
+
 .container-home-start-message{
 	text-align: center;
 	width: 100%;
@@ -75,4 +81,8 @@ p{
 
 .text-bold{
 	font-weight: bold;
+}
+
+.breadcrumb{
+	background: #F0F;
 }
