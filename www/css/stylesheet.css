@@ -4,6 +4,12 @@ font-style: normal;
 font-weight: normal;
 src: url('fonts/Intro/Intro-Bold-Italic.otf');
 }
+@font-face {
+font-family: 'Intro Light';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/Intro/Intro-Light.otf');
+}
 /*
     Author: Auro Mota <auro@blueorc.com>
 */
@@ -135,4 +141,18 @@ p{
 }
 .breadcrumb{
     background: none !important;    
+}
+.breadcrumb > li {
+    padding: 0px 0px !important;
+    margin: 0px !important;
+    font-weight: 100;
+    font-family:'Intro Light';
+}
+.breadcrumb > li + li:before {
+    content: "|" !important;
+}
+#btn-logs{
+    position:absolute;
+    top:80%;
+    left:80%;
 }
