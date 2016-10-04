@@ -96,19 +96,23 @@
 
         function showResult() {
             var params = {};
+            var audio;
             if ($scope.answer.right) {
+                audio = document.getElementById('audio-correct');
                 params.title = 'Parabéns!';
                 params.text = 'Você acertou a questão.';
                 params.type = 'success';
                 params.confirmButtonColor = '#2c3e50';
                 SweetAlert.swal(params, doBroadcast);
             } else {
+                audio = document.getElementById('audio-wrong');
                 params.title = 'Que pena!';
                 params.text = 'Você errou a questão.';
                 params.type = 'error';
                 params.confirmButtonColor = '#2c3e50';
                 SweetAlert.swal(params, showRightAnswer)
             }
+            audio.play();
         }
 
         function showRightAnswer() {

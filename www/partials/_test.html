@@ -3,7 +3,7 @@
 
 -->
 <ul class="breadcrumb">
-    <li><a ng-click="go('home')">Home</a></li>
+    <li><a ng-click="go('home')">Início</a></li>
     <li><a ng-click="go('credentials')">Identificação</a></li>
     <li class="active">Perguntas</li>
 </ul>
@@ -11,7 +11,7 @@
 <div class="container">
     <audio src="audio/correct.mp3" id="audio-correct"></audio>
     <audio src="audio/wrong.mp3" id="audio-wrong"></audio>
-    <br><br> {{question.text}}
+    <br><br> <span class="question-number">0{{answer.order}}</span>. {{question.text}}
     <br><br>
     <form class="form-horizontal" ng-submit="submit()">
         <fieldset>

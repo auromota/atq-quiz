@@ -4,6 +4,12 @@ font-style: normal;
 font-weight: normal;
 src: url('fonts/Intro/Intro-Bold-Italic.otf');
 }
+@font-face {
+font-family: 'Intro Bold';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/Intro/Intro-Bold-Alt.otf');
+}
 /*
     Author: Auro Mota <auro@blueorc.com>
 */
@@ -47,10 +53,16 @@ src: url('fonts/Intro/Intro-Bold-Italic.otf');
 }
 
 .title1{
-    font-family: 'Intro';
+    font-family: 'Intro Bold';
     font-weight: 900;
     color: #2C64A2;
     font-size: 38px;
+}
+.question-number{
+    font-family: 'Intro Bold';
+    font-weight: 900;
+    color: #2C64A2;
+    font-size: 16px;
 }
 
 p{
@@ -111,28 +123,15 @@ p{
     float:none;
     margin: 0 auto;
 }
-
 .container-intro{
     position: relative;
     top: 0px;
 }
-.cascos_inferiores{
-    width: 40%;
-    position:absolute;
-    top:30%;
-    left:-5%;
-}
-.cascos_inferiores_2{
-    width: 40%;
-    position:absolute;
-    top:30%;
-    left:60%;
-}
-.cascos_superiores{
-    width: 40%;
-    position:absolute;
-    left:70%;
-}
 .breadcrumb{
     background: none !important;    
+}
+.breadcrumb-bottom{
+    position:fixed;
+    bottom: 30px;
+    right: 70px;  
 }
