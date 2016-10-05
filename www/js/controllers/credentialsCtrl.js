@@ -19,7 +19,7 @@
             var params = {
                 title: 'Pronto para começar?',
                 text: 'Bem-vindo, ' + $scope.user.name + '! Qual tema deseja responder?',
-                imageUrl: './img/question.png',
+                imageUrl: './img/question_v2.png',
                 showCancelButton: true,
                 cancelButtonText: 'WCM - Controle de Qualidade',
                 confirmButtonText: 'Qualidade e Segurança de Alimentos',
