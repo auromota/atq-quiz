@@ -19,22 +19,30 @@
                 <div class="col-lg-12">
                     <div class="radio">
                         <label ng-class="{'alert alert-success': firstAnswerRight}">
-                            <input type="radio" ng-model="answer.answer" value="1">{{question.firstAnswer}}
+                            <input type="radio" ng-model="answer.answer" value="1">
+                                <span ng-if="firstAnswerRight"><b>RESPOSTA CORRETA:</b></span>
+                                {{question.firstAnswer}}
                         </label>
                     </div>
                     <div class="radio">
                         <label ng-class="{'alert alert-success': secondAnswerRight}">
-                            <input type="radio" ng-model="answer.answer" value="2">{{question.secondAnswer}}
+                            <input type="radio" ng-model="answer.answer" value="2">
+                                <span ng-if="secondAnswerRight"><b>RESPOSTA CORRETA:</b></span>
+                                {{question.secondAnswer}}
                         </label>
                     </div>
                     <div class="radio">
                         <label ng-class="{'alert alert-success': thirdAnswerRight}">
-                            <input type="radio" ng-model="answer.answer" value="3">{{question.thirdAnswer}}
+                            <input type="radio" ng-model="answer.answer" value="3">
+                                <span ng-if="thirdAnswerRight"><b>RESPOSTA CORRETA:</b></span>
+                                {{question.thirdAnswer}}
                         </label>
                     </div>
                     <div class="radio">
                         <label ng-class="{'alert alert-success': fourthAnswerRight}">
-                            <input type="radio" ng-model="answer.answer" value="4">{{question.fourthAnswer}}
+                            <input type="radio" ng-model="answer.answer" value="4">
+                                <span ng-if="fourthAnswerRight"><b>RESPOSTA CORRETA:</b></span>
+                                {{question.fourthAnswer}}
                         </label>
                     </div>
                     <br><br>
