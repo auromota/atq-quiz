@@ -7,9 +7,12 @@
 
     app.controller('logsCtrl', logsCtrl);
 
-    logsCtrl.$inject = ['$scope', '$state', 'SweetAlert', 'testService', 'dbService'];
+    logsCtrl.$inject = ['$scope', '$state', '$rootScope','SweetAlert', 'testService', 'dbService'];
 
-    function logsCtrl($scope, $state, SweetAlert, testService, dbService) {
+    function logsCtrl($scope, $state, $rootScope, SweetAlert, testService, dbService) {
+
+
+        $rootScope.$broadcast('logsInitialized');
 
         $scope.maxCollapsed = true;
         $scope.minCollapsed = true;

@@ -19,20 +19,40 @@ src: url('fonts/Intro/Intro-Light.otf');
 /*
     Author: Auro Mota <auro@blueorc.com>
 */
-
+.text-bold{
+    font-family: 'Intro Light';
+}
 .background {
-    background-image: url('../img/bottom-left.png'), url('../img/top-right.png');
+    background-image: url('../img/topo.png'), url('../img/man_quiz.png');
+    background-size: 100%, 30%;
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
-    background-position: left bottom, right top;
+    background-position: top, left bottom;
 }
 
-.background2 {
+.background-logs {
+    background-image: url('../img/topo.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+}
+
+.background-question {
+    background-image: url('../img/topo.png'), url('../img/man.png');
+    background-size: 100%, 30%;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: top, right bottom;
+    height: 100vh;
+}
+
+/*.background2 {
     background-image: url('../img/bottom-right.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right bottom;
-}
+}*/
 
 .jumbotron-btns a:not(:first-child) {
     margin-left: 10px;
@@ -76,7 +96,7 @@ p{
 }
 
 .result {
-    width: 40% !important;
+    
 }
 
 .left-panel {
@@ -106,7 +126,9 @@ p{
 }
 
 .score {
-    font-size: 75px;
+    font-family: 'Intro Bold';
+    font-size: 55px;
+    color: #2C649F;
 }
 
 .expand {
@@ -148,6 +170,50 @@ p{
     font-weight: 100;
     font-family:'Intro Light';
 }
+.breadcrumb > li > a{
+    color: #999 !important;
+}
+.breadcrumb > li.active{
+    color: #2C649F;
+}
 .breadcrumb > li + li:before {
     content: "|" !important;
+}
+.form-control{
+    border: solid 2px #2C649F !important;
+    border-radius: 40px !important;
+}
+.progress{
+    background: none !important;
+    border: solid 2px #2C649F !important;
+}
+.btn-submit{
+    background: none !important;
+    border: none !important;
+}
+label.alert-success{
+    background: #289443;
+    border-radius: 40px;
+    position: relative;
+    left: -10px;
+    padding: 5px;
+}
+.panel{
+    border: none !important;
+}
+.panel-primary>.panel-heading {
+    background: #2C649F !important;
+    border: none; 
+    border-radius: 50px;
+}
+.panel-title {
+    font-family: 'Intro Bold';
+    font-weight: 900;
+    font-size: 25px !important;
+}
+
+h4.title-logs{
+    font-family: 'Intro Bold';
+    font-weight: 900;
+    color: #00A3D9;
 }

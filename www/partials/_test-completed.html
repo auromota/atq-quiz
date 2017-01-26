@@ -6,20 +6,37 @@
         top: -10%;
     }
 </style>
-<ul class="breadcrumb">
-    <li><a ui-sref="home">Início</a></li>
-    <li><a ui-sref="credentials">Identificação</a></li>
-    <li class="active">Resultado</li>
-</ul>
-<div class="container result text-center container-intro">
-    <h3 class="title1">Teste completo!</h3>
-    <p>Você acertou <strong>{{rightCount}}</strong> de <strong>{{total}}</strong> perguntas.</p>
-    <div class="progress">
-        <div class="progress-bar progress-bar-success" wq-progress-bar="left"></div>
-        <div class="progress-bar progress-bar-danger" wq-progress-bar="right"></div>
+<div class="container-fluid result text-center container-intro">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-lg-3">
+            <ul class="breadcrumb">
+                <li><a ui-sref="home">Início</a></li>
+                <li><a ui-sref="credentials">Identificação</a></li>
+                <li class="active">Resultado</li>
+            </ul>   
+        </div>
+        <div class="col-lg-9" style="position: relative;left: -155px">
+            <h3 class="title1">Teste completo!</h3>
+            <p>Você acertou <strong>{{rightCount}}</strong> de <strong>{{total}}</strong> perguntas.</p>
+            <div class="progress col-lg-6 col-lg-offset-3">
+                <div class="progress-bar progress-bar-success" wq-progress-bar="left"></div>
+                <div class="progress-bar progress-bar-danger" wq-progress-bar="right"></div>
+            </div>
+            <br><br><br><br>
+            <div class="col-lg-6 col-lg-offset-3">
+                <a ui-sref="home">
+                    <img src="img/btn-back.png" class="img-responsive center-component" alt="" style="width: 30%">
+                </a>
+            </div>
+        </div>
     </div>
-    <br><br><br>
-    <img src="img/logotipo.png" alt="Quiz Unilever" title="Quiz Unilever">
-    <br><br><br><br>
-    <a ui-sref="home" class="btn btn-danger">Voltar</a>
 </div>

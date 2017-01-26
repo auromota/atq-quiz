@@ -25,7 +25,7 @@
         $scope.secondAnswerRight = '';
         $scope.thirdAnswerRight = '';
         $scope.fourthAnswerRight = '';
-        $scope.confirmBtn = 'Responder';
+        $scope.confirmBtn = 'btn-answer';
 
         if (user.id) {
             loadAnswers();
@@ -128,7 +128,7 @@
                 default:
                     break;
             }
-            $scope.confirmBtn = 'Continuar';
+            $scope.confirmBtn = 'btn-continue';
             $scope.enableButton = false;
         }
 

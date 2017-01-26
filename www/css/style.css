@@ -19,18 +19,6 @@ html,body{
 	float:left;
 }
 
-.bg-esq-inf{
-	background: url('../img/esq_inf.png');
-	background-position: 0 100%;
-}
-.bg-sup-dir{
-	background: url('../img/sup_dir.png');
-}
-.bg-esq-inf, .bg-sup-dir{
-	background-repeat:no-repeat;
-	height: 100%;
-}
-
 #btn-logs{
 	*position:absolute;
 	top:80%;

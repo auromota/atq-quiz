@@ -2,61 +2,72 @@
     Author: Auro Mota <auro@blueorc.com>
 
 -->
-<ul class="breadcrumb">
-    <li><a ng-click="go('home')">Início</a></li>
-    <li><a ng-click="go('credentials')">Identificação</a></li>
-    <li class="active">Perguntas</li>
-</ul>
-
-<div class="container">
+<div class="container-fluid background-question">
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br><br>
     <audio src="audio/correct.mp3" id="audio-correct"></audio>
     <audio src="audio/wrong.mp3" id="audio-wrong"></audio>
-    <br><br> <span class="question-number">0{{answer.order}}</span>. {{question.text}}
-    <br><br>
-    <form class="form-horizontal" ng-submit="submit()">
-        <fieldset>
-            <div class="form-group">
-                <div class="col-lg-12">
-                    <div class="radio">
-                        <label ng-class="{'alert alert-success': firstAnswerRight}">
-                            <input type="radio" ng-model="answer.answer" value="1">
-                                <span ng-if="firstAnswerRight"><b>RESPOSTA CORRETA:</b></span>
-                                {{question.firstAnswer}}
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label ng-class="{'alert alert-success': secondAnswerRight}">
-                            <input type="radio" ng-model="answer.answer" value="2">
-                                <span ng-if="secondAnswerRight"><b>RESPOSTA CORRETA:</b></span>
-                                {{question.secondAnswer}}
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label ng-class="{'alert alert-success': thirdAnswerRight}">
-                            <input type="radio" ng-model="answer.answer" value="3">
-                                <span ng-if="thirdAnswerRight"><b>RESPOSTA CORRETA:</b></span>
-                                {{question.thirdAnswer}}
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label ng-class="{'alert alert-success': fourthAnswerRight}">
-                            <input type="radio" ng-model="answer.answer" value="4">
-                                <span ng-if="fourthAnswerRight"><b>RESPOSTA CORRETA:</b></span>
-                                {{question.fourthAnswer}}
-                        </label>
-                    </div>
-                    <br><br>
+    <div class="col-lg-10 col-lg-offset-1">
+        <div class="row" style="position: relative;left: -15px">
+            <ul class="breadcrumb">
+                <li><a ng-click="go('home')">Início</a></li>
+                <li><a ng-click="go('credentials')">Identificação</a></li>
+                <li class="active">Perguntas</li>
+            </ul>        
+        </div>
+         <div class="row">
+            <span class="question-number">0{{answer.order}}</span>. {{question.text}}
+            <br>
+            <form class="form-horizontal" ng-submit="submit()">
+                <fieldset>
                     <div class="form-group">
-                        <div class="">
-                            <button type="submit" class="btn btn-success" ng-disabled="enableButton">{{confirmBtn}}</button>
+                        <div class="col-lg-12">
+                            <div class="radio">
+                                <label ng-class="{'alert alert-success': firstAnswerRight}">
+                                    <input type="radio" ng-model="answer.answer" value="1">
+                                        {{question.firstAnswer}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label ng-class="{'alert alert-success': secondAnswerRight}">
+                                    <input type="radio" ng-model="answer.answer" value="2">
+                                        {{question.secondAnswer}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label ng-class="{'alert alert-success': thirdAnswerRight}">
+                                    <input type="radio" ng-model="answer.answer" value="3">
+                                        {{question.thirdAnswer}}
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label ng-class="{'alert alert-success': fourthAnswerRight}">
+                                    <input type="radio" ng-model="answer.answer" value="4">
+                                        {{question.fourthAnswer}}
+                                </label>
+                            </div>
+                            <br><br>
+                            <div class="form-group">
+                                <div class="">
+                                    <button type="submit" class="btn-submit" ng-disabled="enableButton">
+                                        <img src="img/{{confirmBtn}}.png" alt="" class="img-responsive"
+                                            style="width: 15%;position: relative;left: 15px"> 
+                                    </button>
+                                </div>                                
+                            </div>
                         </div>
                     </div>
+                </fieldset>
+            </form>
+        </div> 
+        <div class="row" style="position: relative;left: -15px">
+            <div class="col-lg-10">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" wq-progress-bar="left"></div>
                 </div>
             </div>
-        </fieldset>
-    </form>
-
-    <div class="progress">
-        <div class="progress-bar progress-bar-info" wq-progress-bar="left"></div>
+        </div>
     </div>
 </div>
