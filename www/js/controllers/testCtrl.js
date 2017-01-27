@@ -99,17 +99,21 @@
             var audio;
             if ($scope.answer.right) {
                 audio = document.getElementById('audio-correct');
-                params.title = 'Parabéns!';
-                params.text = 'Você acertou a questão.';
+                params.title = '';
+                params.text = '';
+                params.imageUrl= './img/correct-answer.png',
+                params.imageSize= '226x264',
                 params.type = 'success';
-                params.confirmButtonColor = '#2c3e50';
+                params.confirmButtonColor = '#44649B';
                 SweetAlert.swal(params, doBroadcast);
             } else {
                 audio = document.getElementById('audio-wrong');
-                params.title = 'Que pena!';
-                params.text = 'Você errou a questão.';
+                params.title = '';
+                params.text = '';
+                params.imageUrl= './img/wrong-answer-2.png',
+                params.imageSize= '256x288',
                 params.type = 'error';
-                params.confirmButtonColor = '#2c3e50';
+                params.confirmButtonColor = '#44649B';
                 SweetAlert.swal(params, showRightAnswer)
             }
             audio.play();

@@ -78,11 +78,12 @@
 
         function showNewTest() {
             var params = {
-                title: 'Boa sorte!',
+                title: '',
                 text: 'Vamos lá, mostre o seu melhor! ;)',
-                imageUrl: './img/luck.png',
+                imageUrl: './img/good-luck.png',
+                imageSize: '202x202',
                 confirmButtonText: 'Partiu',
-                confirmButtonColor: '#2c3e50'
+                confirmButtonColor: '#91BB21'
             }
             SweetAlert.swal(params, createNewTest);
         }
