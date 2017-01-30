@@ -50,13 +50,15 @@
 
         function continueTest(testId) {
             var params = {
-                title: 'Teste em progresso!',
-                text: 'Você já tem um teste em progresso. Deseja continuá-lo?',
+                title: '',
+                text: '',
+                imageUrl: './img/test-em-progresso.png',
+                imageSize: '374x238',
                 type: 'warning',
                 showCancelButton: true,
                 cancelButtonText: 'Novo teste',
                 confirmButtonText: 'Continuar',
-                confirmButtonColor: '#2c3e50'
+                confirmButtonColor: '#2C649F'
             };
             SweetAlert.swal(params, function (isConfirm) {
                 if (isConfirm) {
