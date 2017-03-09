@@ -18,6 +18,15 @@
         $scope.submit = function () {
             $('#myModal').modal('show');
 
+            $(".btnWCM").click(function(){
+                $('#myModal').modal('hide');
+                confirmUser(WCM);
+            });
+            $(".btnQSA").click(function(){
+                $('#myModal').modal('hide');
+                confirmUser(QSA)
+            });
+
             var params = {
                 title: 'Pronto para começar?',
                 text: 'Bem-vindo, ' + $scope.user.name + '! Qual tema deseja responder?',
