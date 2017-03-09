@@ -26,26 +26,6 @@
                 $('#myModal').modal('hide');
                 confirmUser(QSA)
             });
-
-            var params = {
-                title: 'Pronto para começar?',
-                text: 'Bem-vindo, ' + $scope.user.name + '! Qual tema deseja responder?',
-                imageUrl: './img/icon-cerebro.png',
-                imageSize: '202x202',
-                showCancelButton: true,
-                cancelButtonText: 'WCM - Controle de Qualidade',
-                confirmButtonText: 'Qualidade e Segurança de Alimentos',
-                confirmButtonColor: '#2c3e50',
-                closeOnCancel: false,
-                closeOnConfirm: false
-            };
-            // SweetAlert.swal(params, function (isConfirm) {
-            //     if (isConfirm) {
-            //         confirmUser(QSA);
-            //     } else {
-            //         confirmUser(WCM);
-            //     }
-            // });
         }
 
         function confirmUser(theme) {
