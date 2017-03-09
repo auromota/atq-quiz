@@ -5,7 +5,7 @@
 <div class="container-fluid background-question">
     <audio src="audio/correct.mp3" id="audio-correct"></audio>
     <audio src="audio/wrong.mp3" id="audio-wrong"></audio>
-    <div class="col-lg-10 col-lg-offset-1">
+    <div class="col-lg-10 col-lg-offset-1 container-home">
         <div class="row" style="position: relative;left: -15px">
             <ul class="breadcrumb">
                 <li><a ng-click="go('home')">Início</a></li>
@@ -46,12 +46,13 @@
                             </div>
                             <br><br>
                             <div class="form-group">
-                                <div class="">
-                                    <button type="submit" class="btn-submit" ng-disabled="enableButton">
-                                        <img src="img/{{confirmBtn}}.png" alt="" class="img-responsive"
-                                            style="width: 15%;position: relative;left: 15px"> 
-                                    </button>
-                                </div>                                
+                                <div class="col-sm-10 col-md-10 col-lg-10"> 
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <button type="submit" class="btn-submit" ng-disabled="enableButton">
+                                            <img src="img/{{confirmBtn}}.png" alt="" class="img-responsive" style="position: relative; left:-2vw">
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
