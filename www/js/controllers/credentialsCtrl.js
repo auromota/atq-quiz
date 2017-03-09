@@ -16,6 +16,8 @@
         var QSA = 2;
 
         $scope.submit = function () {
+            $('#myModal').modal('show');
+
             var params = {
                 title: 'Pronto para começar?',
                 text: 'Bem-vindo, ' + $scope.user.name + '! Qual tema deseja responder?',
@@ -28,13 +30,13 @@
                 closeOnCancel: false,
                 closeOnConfirm: false
             };
-            SweetAlert.swal(params, function (isConfirm) {
-                if (isConfirm) {
-                    confirmUser(QSA);
-                } else {
-                    confirmUser(WCM);
-                }
-            });
+            // SweetAlert.swal(params, function (isConfirm) {
+            //     if (isConfirm) {
+            //         confirmUser(QSA);
+            //     } else {
+            //         confirmUser(WCM);
+            //     }
+            // });
         }
 
         function confirmUser(theme) {

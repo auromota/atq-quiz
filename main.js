@@ -14,6 +14,7 @@ app.on('window-all-closed', function () {
     }
 });
 
+
 app.on('ready', function () {
     // win = new BrowserWindow({ width: 800, height: 600, show: false, minWidth: 1365, minHeight: 768});
     win = new BrowserWindow({ width: 1365, height: 768, show: false, minWidth: 1365, minHeight: 768});
@@ -23,4 +24,13 @@ app.on('ready', function () {
     win.on('closed', function () {
         mainWindow = null;
     });
+
+    win.webContents.openDevTools();
+
+    try {
+        win.webContents.debugger.attach('1.1')
+    } catch (err) {
+        console.log('Debugger attach failed : ', err)
+    }
+
 });

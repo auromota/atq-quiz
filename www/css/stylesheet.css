@@ -220,3 +220,20 @@ h4.title-logs{
 .breadcrumb > li > a{
     cursor: pointer;
 }
+.container-home{
+    position: relative;
+    top: 13vw;
+}
+
+.btn-quiz-1{
+    background: #B9B9B9;
+}
+
+.btn-quiz-2{
+    background: #2C3E50;
+}
+
+.btn-quiz-1:hover, .btn-quiz-2:hover{
+    background: #2C649F !important;
+    border: solid 2px #0A428D !important;
+}
