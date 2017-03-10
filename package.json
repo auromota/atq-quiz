@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/auromota/atq-quiz#readme",
   "devDependencies": {
+    "electron-packager": "^8.5.2",
     "electron-prebuilt": "^1.2.7"
   }
 }
