@@ -106,7 +106,7 @@
         }
 
         function insertQuestions() {
-            var url = './questions.json';
+            var url = './questions_correct.json';
             return $http.get(url).then(
                 function (response) {
                     response.data.forEach(function (question) {

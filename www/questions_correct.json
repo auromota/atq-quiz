@@ -1,0 +1,887 @@
+[
+	{
+		"text": "Qual o objetivo da ferramenta '4M'?",
+		"firstAnswer": "Definir os responsáveis pelas ações",
+		"secondAnswer": "Avaliar todos os custos do projeto",
+		"thirdAnswer": "Identificar as causas potenciais do problema de acordo com os 4M´s: Máquina, Material, Método e Mão de Obra",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1		
+	},
+	{
+		"text": "Na análise de causa, quais são os '4M´s' que devemos considerar?",
+		"firstAnswer": "Método, Manutenção, Meio Ambiente e Medição",
+		"secondAnswer": "Método, Mão de Obra, Material e Máquina",
+		"thirdAnswer": "Máquina, Mão de obra, Meio Ambiente e Monitoramento",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1		
+	},
+	{
+		"text": "O que é Matriz QA?",
+		"firstAnswer": "Matriz de qualidade que prioriza os defeitos a serem atacados",
+		"secondAnswer": "Matriz de segurança que mostra os incidentes ocorridos no mês",
+		"thirdAnswer": "Matriz de custo que indica os principais custos da fábrica",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1		
+	},
+	{
+		"text": "Qual é a matriz que prioriza os problemas de qualidade?",
+		"firstAnswer": "Matriz QM",
+		"secondAnswer": "Matriz S",
+		"thirdAnswer": "Matriz QA",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},
+	{
+		"text": "Qual o objetivo da ferramenta '5W1H'?",
+		"firstAnswer": "Compreender como o problema aconteceu (fenômeno)",
+		"secondAnswer": "Definir o crongorama do projeto",
+		"thirdAnswer": "Definir os responsáveis pelas ações",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1		
+	},
+	{
+		"text": "Quais são as perguntas da ferramenta '5W1H'?",
+		"firstAnswer": "Custo, Benefício e Responsável",
+		"secondAnswer": "5 vezes a pergunta porque",
+		"thirdAnswer": "O que, Quando, Onde, Quem,  Qual e Como",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1		
+	},
+	{
+		"text": "Qual o objetivo da ferramenta '5Porques'?",
+		"firstAnswer": "Formar a equipe do kaizen",
+		"secondAnswer": "Aprofundar na causa raiz do problema",
+		"thirdAnswer": "Identificar se uma ação foi concluída",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},	
+	{
+		"text": "Qual é o principal objetivo dos kaizens de qualidade?",
+		"firstAnswer": "Eliminar ou reduzir não conformidades",
+		"secondAnswer": "Entender as quebras de máquina",
+		"thirdAnswer": "Reduzir o tempo de produção do produto",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},	
+	{
+		"text": "Quem pode fazer parte dos times de kaizens de qualidade?",
+		"firstAnswer": "Somente colaboradores da área de qualidade",
+		"secondAnswer": "Somente coordenação e gerência",
+		"thirdAnswer": "Todos, time preferencialmente multifuncional",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},	
+	{
+		"text": "Qual o objetivo do Radar Chart do time do kaizen?",
+		"firstAnswer": "Identificar as ferramentas necessárias para execução do kaizen e o nível de conhecimento dos membros para cada ferramenta.",
+		"secondAnswer": "Identificar qual problema de qualidade mais impacta no indicador",
+		"thirdAnswer": "Deixar o kaizen mais ilustrado",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},	
+	{
+		"text": "O que significa a sigla 'PDCA'?",
+		"firstAnswer": "Programar, deduzir, conferir e agilizar",
+		"secondAnswer": "Pesquisar, definir, cobrar e agir",
+		"thirdAnswer": "Planejar (Plan), Fazer (Do), Checar (Check), Agir (Act)",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},	
+	{
+		"text": "Qual o objetivo do Ciclo 'PDCA'?",
+		"firstAnswer": "Promover a melhoria contínua através de um ciclo de quatro ações: planejar, fazer, checar e agir",
+		"secondAnswer": "Fazer o projeto sem uma sequência lógica, começando pela ferramenta mais fácil",
+		"thirdAnswer": "Deixar o projeto mais demorado e dificil",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},	
+	{
+		"text": "O que significa a sigla 'CEP'?",
+		"firstAnswer": "Consumo econômico de produto",
+		"secondAnswer": "Certificado em  engenharia de processo",
+		"thirdAnswer": "Controle estatístico de processo",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},	
+	{
+		"text": "Para que serve a ferramenta '5S'?",
+		"firstAnswer": "Conceitos para organização e disciplina no ambiente de trabalho",
+		"secondAnswer": "Eliminação de manutenção nas máquinas",
+		"thirdAnswer": "Priorizar problemas de qualidade",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},	
+	{
+		"text": "Quando utilizamos o fluxo decisório de método?",
+		"firstAnswer": "Problemas de máquina",
+		"secondAnswer": "Problemas de mão de obra",
+		"thirdAnswer": "Problemas de método",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},	
+	{
+		"text": "O que é um poka yoke?",
+		"firstAnswer": "Dispostivo para limpeza da máquina",
+		"secondAnswer": "Ferramenta para manutenção do equipamento",
+		"thirdAnswer": "Dispositivo que impede erros/falhas",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},	
+	{
+		"text": "O que é um error proofing?",
+		"firstAnswer": "Dispostivo para limpeza da máquina",
+		"secondAnswer": "Dispositivo que verifica erros/defeitos",
+		"thirdAnswer": "Ferramenta para manutenção do equipamento",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},	
+	{
+		"text": "O que é a Matriz QX?",
+		"firstAnswer": "Matriz de Correlação entre os defeitos de qualidade, fenômeno, componentes e condições ótimas dos componentes",
+		"secondAnswer": "Matriz de resultado de análise de laboratório",
+		"thirdAnswer": "Matriz de reclamações de consumidor",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},
+	{
+		"text": "O que é Matriz QM?",
+		"firstAnswer": "Matriz de reclamações de consumidor",
+		"secondAnswer": "Matriz de resultado de análise de laboratório",
+		"thirdAnswer": "Matriz que estabelece frequência e responsabilidade para controle das condições dos componentes",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},	
+	{
+		"text": "Quando utilizamos a Matriz QX e QM?",
+		"firstAnswer": "Problemas de máquina",
+		"secondAnswer": "Problemas de mão de obra",
+		"thirdAnswer": "Problemas de método",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},	
+	{
+		"text": "Quando utilizamos a 'TWTTP'?",
+		"firstAnswer": "Problemas de máquina",
+		"secondAnswer": "Problemas de mão de obra",
+		"thirdAnswer": "Problemas de método",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},	
+	{
+		"text": "O que é uma SOI?",
+		"firstAnswer": "Procedimento com apenas textos que nunca deve ser alterado",
+		"secondAnswer": "Procedimento para padronizar as atividades executadas",
+		"thirdAnswer": "Livro com fotos dos equipamentos",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},	
+	{
+		"text": "Preferencialmente, como deve ser uma 'SOI'?",
+		"firstAnswer": "Procedimento deve conter apenas textos",
+		"secondAnswer": "Procedimento deve ser bem resumido, mostrando a atividade de uma forma geral e nunca deve ser alterado",
+		"thirdAnswer": "Procedimento bem ilustrado mostrando claramente os passos para realizar as atividades",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},	
+	{
+		"text": "Qual o objetivo principal da 'SOI'?",
+		"firstAnswer": "Informar os perigos da área",
+		"secondAnswer": "Padronizar as atividadess mostrando claramente os passos",
+		"thirdAnswer": "Apenas cumprir os requisitos de WCM",
+        "rightAnswer": 2,
+        "theme": 1
+		"fourthAnswer": "Eu desconheço",
+	},	
+	{
+		"text": "Qual o objetivo da ferramenta '5 perguntas para zero defeito'?",
+		"firstAnswer": "Entender o fenômeno e o problema",
+		"secondAnswer": "Verificar as condições para estabelecimento do zero defeito",
+		"thirdAnswer": "Definir plano de ação e responsáveis",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},		
+	{
+		"text": "Como saber se a ação implemetada foi eficiente para reduzir ou zerar os problemas de qualidade?",
+		"firstAnswer": "Acompanhar processo, indicadores de qualidade e/ou reclamações de consumidor",
+		"secondAnswer": "Apenas conversar com os técnicos",
+		"thirdAnswer": "Não é necessário verificar os resultados",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},		
+	{
+		"text": "Quais são os 4 tipos de kaizens?",
+		"firstAnswer": "Quick, Standard, Advanced e Major",
+		"secondAnswer": "Simples, complexo, implementação rápida e implementação lenta",
+		"thirdAnswer": "Major e advanced apenas",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},		
+	{
+		"text": "O que significa 'LPP'?",
+		"firstAnswer": "Linguagem para produzir",
+		"secondAnswer": "Listagem dos procedimentos padrões",
+		"thirdAnswer": "Lição Ponto a Ponto",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},		
+	{
+		"text": "Qual o objetivo da 'LPP' (Lição ponto a ponto)?",
+		"firstAnswer": "Treinamento rápido e eficaz sobre determinado tema",
+		"secondAnswer": "Definir o procedimento de trabalho",
+		"thirdAnswer": "Apenas informar os riscos na área",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},
+	{
+		"text": "Qual é o pilar de 'WCM' que visa zerar os defeitos de qualidade?",
+		"firstAnswer": "AM",
+		"secondAnswer": "PM",
+		"thirdAnswer": "QC",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},
+	{
+		"text": "O que significa a sigla 'QC' do pilar de qualidade?",
+		"firstAnswer": "Termo em inglês que significa Segurança de Alimentos",
+		"secondAnswer": "Do inglês Quality Control, significa Controle de Qualidade",
+		"thirdAnswer": "Quantidade Controlada",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},
+	{
+		"text": "Qual o objetivo principal do pilar de qualidade?",
+		"firstAnswer": "Zero defeitos",
+		"secondAnswer": "Zero quebras",
+		"thirdAnswer": "Zero acidentes",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},
+	{
+"text": "O que é 'kaizen'?",
+		"firstAnswer": "Ferramenta para manutenção preventiva",
+		"secondAnswer": "Ferramenta de análise estatística",
+		"thirdAnswer": "Metodologia para melhoria contínua dos processos",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},		
+	{
+		"text": "O que é um 'sketch'?",
+		"firstAnswer": "Pictograma informando o perigo químico do produto",
+		"secondAnswer": "Descrição com desenhos",
+		"thirdAnswer": "Desenhos feitos apenas no computador",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},		
+	{
+		"text": "Qual a importância dos sketchs (desenhos feitos à mão)?",
+		"firstAnswer": "Cumprir requisitos de WCM apenas",
+		"secondAnswer": "Deixar o kaizen mais bonito",
+		"thirdAnswer": "Permitir um entendimento melhor e mais rápido do problema",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},		
+	{
+		"text": "O que é a 'causa raiz' de um problema?",
+		"firstAnswer": "São as causas que não estão relacionadas com o problema",
+		"secondAnswer": "Causa original que gera o problema e que, se eliminada, o problema não ocorrerá novamente.",
+		"thirdAnswer": "São todas as possíveis causas de um problema.",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},		
+	{
+		"text": "O que é o 'fenômeno' do problema?",
+		"firstAnswer": "Solução do problema",
+		"secondAnswer": "Entendimento sobre como acontece o problema",
+		"thirdAnswer": "Apenas o custo relacionado ao problema",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},		
+	{
+		"text": "O que são as 'causas potenciais' de um problema?",
+		"firstAnswer": "Apenas as causas ligadas à maquina",
+		"secondAnswer": "São todas as possíveis causas levantadas na ferramenta '4M', que podem influenciar no problema",
+		"thirdAnswer": "São as causas que aconteceram mais que 4 vezes consecutivas",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},		
+	{
+		"text": "O que são problemas de 'método'?",
+		"firstAnswer": "Causa do problema está relacionada ao método ou procedimento utilizado para executar o trabalho",
+		"secondAnswer": "A causa do problema está relacionada à falhas de máquinas ",
+		"thirdAnswer": "A causa do problema está relacionada à matéria prima utilizada",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},		
+	{
+		"text": "O que são problemas de 'máquina'?",
+		"firstAnswer": "Causa do problema está relacionada ao método ou procedimento utilizado para executar o trabalho",
+		"secondAnswer": "A causa do problema está relacionada à falhas de máquinas ",
+		"thirdAnswer": "A causa do problema está relacionada à matéria prima utilizada",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},		
+	{
+		"text": "O que são problemas de 'material'?",
+		"firstAnswer": "Causa do problema está relacionada ao método ou procedimento utilizado para executar o trabalho",
+		"secondAnswer": "A causa do problema está relacionada à falhas de máquinas ",
+		"thirdAnswer": "A causa do problema está relacionada à matéria prima utilizada",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},		
+	{
+		"text": "O que são problemas de 'mão de obra'?"
+		"firstAnswer": "Causa do problema está relacionada ao método ou procedimento utilizado para executar o trabalho",
+		"secondAnswer": "A causa do problema está relacionada à falhas de máquinas",
+		"thirdAnswer": "A causa do problema está relacionado à falha humana",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},		
+	{
+		"text": "O que é 'priorização'?",
+		"firstAnswer": "Arte de escolher entre as possibilidades seguindo uma ordem alfabética",
+		"secondAnswer": "Arte de escolher entre as possibilidades aquela que melhor atende às necessidades",
+		"thirdAnswer": "Arte de escolher entre as possibilidadess de forma aleatória",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},		
+	{
+		"text": "Qual o objetivo da ferramenta 'TWTTP'?",
+		"firstAnswer": "Avaliar os problemas de máquina",
+		"secondAnswer": "Avaliar problemas de matéria prima",
+		"thirdAnswer": "Avaliar contribuição do homem para o problema",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 1
+	},
+	{",
+		"text": "Qual das alternativas a seguir contém ferramentas básicas para desenvolvimento de  um kaizen?",
+		"firstAnswer": "4M, Skecht, 5W1H, 5 Porques",
+		"secondAnswer": "5S, GMP, Inbound sampling",
+		"thirdAnswer": "4M, Qualis, CEP",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},		
+	{
+		"text": "Qual a importância de atacarmos a causa raiz de um problema e não o seus sintomas?",
+		"firstAnswer": "Eliminar a origem do problema para que ele não ocorra novamente",
+		"secondAnswer": "É sempre mais simples e barato atacar a causa raiz",
+		"thirdAnswer": "Atacar as causas raizes ou sintomas é indiferente para a solução do problema",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 1
+	},		
+	{
+		"text": "O que é 'Ponto Q' de qualidade?",
+		"firstAnswer": "São as regras de ouro da segurança",
+		"secondAnswer": "Pontos no equipamento em que há controle com frequência e responsabilidade definida.",
+		"thirdAnswer": "São os pontos de controle de pragas",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},		
+	{
+		"text": "Qual o objetivo principal da ferramenta 5G?",
+		"firstAnswer": "Identificar os riscos de acidentes no local",
+		"secondAnswer": "Identificar o problema através de observação direta",
+		"thirdAnswer": "Analisar o plano de ação do kaizen",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 1
+	},
+[
+	{
+		"text": "O que significa CRQS?",
+		"firstAnswer": "Termo em inglês que significa 'Padrões de Segurança'",
+		"secondAnswer": "Termo em inglês que significa 'Sistema de Gestão de Qualidade'",
+		"thirdAnswer": "Termo em inglês que significa 'Padrões de Qualidade relevantes para Consumidores'",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2		
+	},
+	{
+		"text": "Qual o objetivo do CRQS?",
+		"firstAnswer": "Garantir atributos sensoriais do produto",
+		"secondAnswer": "Garantir os padrões de qualidade conforme perspectiva do consumidor",
+		"thirdAnswer": "Apenas cumprir normas de segurança de alimentos",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2		
+	},
+	{
+		"text": "O que significa PCC?",
+		"firstAnswer": "Pesquisa de conhecimento do consumidor",
+		"secondAnswer": "Matéria-prima",
+		"thirdAnswer": "Ponto crítico de controle",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2		
+	},
+	{
+		"text": "O que significa PPRO?",
+		"firstAnswer": "Ponto crítico de controle",
+		"secondAnswer": "Programa de pré requisito operacional",
+		"thirdAnswer": "Período padrão operacional",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},
+	{
+		"text": "O que significa HACCP?",
+		"firstAnswer": "Termo em inglês que significa Análise de Perigos e Pontos Críticos de Controle.",
+		"secondAnswer": "Termo em inglês que significa Análise dos Produtos Químicos.  ",
+		"thirdAnswer": "Termo em inglês que significa Análise de equipamentos em utilização ",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2		
+	},
+	{
+		"text": "O que é GMP?",
+		"firstAnswer": "Regras de engenharia que não atendem a legislação. ",
+		"secondAnswer": "Termo em inglês que significa Boas Práticas de Manufatura.",
+		"thirdAnswer": "Guia de Manutenção Prática",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2		
+	},
+	{
+		"text": "Qual a importância de HACCP para a Indústria de Alimentos? ",
+		"firstAnswer": "Identificação e controle dos perigos aos produtos durante o processo de fabricação para garantir produtos seguros aos consumidores.n",
+		"secondAnswer": "Análise de Produtos Químicos.",
+		"thirdAnswer": "Controle de Embalagem no estoque",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},	
+	{
+		"text": "Qual o objetivo do Food Defense (Defesa do Alimento)?",
+		"firstAnswer": "Proteger nossos produtos contra adulteração intencional e assegurar produtos seguros para os consumidores.	",
+		"secondAnswer": "Controlar as embalagens utilizadas",
+		"thirdAnswer": "Controlar o tempo de produção",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},	
+	{
+		"text": "Com relação a Armazenamento de Alergênicos, qual alternativa está correta?",
+		"firstAnswer": "Não tem problema misturar produtos alergênicos com produtos não alergênicos",
+		"secondAnswer": "Os produtos alergênicos não precisam estar identificados",
+		"thirdAnswer": "Os produtos alergênicos devem estar identificados e armazenados corretamente dentro da mesma família de alergênicos.",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},	
+	{
+		"text": "Quem deve seguir a política de qualidade?",
+		"firstAnswer": "Todos os colaboradores.",
+		"secondAnswer": "Apenas gerência",
+		"thirdAnswer": "Ninguém",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},	
+	{
+		"text": "Qual item faz parte das Regras de Ouro da qualidade e segurança de alimentos?",
+		"firstAnswer": "Falsificar e/ou negligenciar registros de PCC e resultados de qualidade.",
+		"secondAnswer": "Descartar papel no lixo de plásticos",
+		"thirdAnswer": "Não existem regras de ouro de qualidade",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},	
+	{
+		"text": "O que é FSSC22000?",
+		"firstAnswer": "É um sistema de gestão de meio ambiente",
+		"secondAnswer": "É um sistema de gestão de controle de pragas",
+		"thirdAnswer": "É um sistema de gestão de segurança dos alimentos	",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},	
+	{
+		"text": "Qual a importância da Política de Vidros ?",
+		"firstAnswer": "Proibir utilização de vidro na fábrica",
+		"secondAnswer": "Deixar os vidros da fábrica da mesma cor e tamanho",
+		"thirdAnswer": "Proteger nossos produtos contra contaminação por vidro",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},	
+	{
+		"text": "Qual dos itens é um dos ojetivos do Zoaning?",
+		"firstAnswer": "Controlar o custo de cada produto",
+		"secondAnswer": "Contar a quantidade de máquinas que existe na fábrica",
+		"thirdAnswer": "Controlar práticas de sanitização (tipo de limpeza e utensílios)",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},	
+	{
+		"text": "O que é 'Controle de Pragas'?",
+		"firstAnswer": "Regras sobre como cuidar dos animais/insetos",
+		"secondAnswer": "Conjunto de regras, cuidados e procedimentos para evitar o acesso de pragas nos prédios e manufaturas",
+		"thirdAnswer": "Não há controle de pragas na planta",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},	
+	{
+		"text": "Quando devemos utilizar o formulário de monitoramento 'MIP'?",
+		"firstAnswer": "Quando a mesma praga for vista 3 vezes consecutivas no dia",
+		"secondAnswer": "Sempre que for identificada alguma praga no local de trabalho",
+		"thirdAnswer": "Somente quando identificarmos pragas de grande porte",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},	
+	{
+		"text": "Qual a importância dos apontamentos no formulário de monitoramento 'MIP'?",
+		"firstAnswer": "Apenas cumprir com requisitos de normas",
+		"secondAnswer": "Monitorar o aparecimento de pragas e definir métodos de controle e prevenção",
+		"thirdAnswer": "Monitorar apenas as pragas de grande porte",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},	
+	{
+		"text": "Qual a importância do 'Controle de Pragas'?",
+		"firstAnswer": "Apenas mapear quais pragas foram identificadas na planta",
+		"secondAnswer": "Impedir que insetos, roedores e aves entrem no interior da fábrica e armazéns e contaminem os produtos/insumos",
+		"thirdAnswer": "Controle de Pragas é opicional na planta pois não apresenta resultados relevantes",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},
+	{
+		"text": "O que é 'NQ'?",
+		"firstAnswer": "Formulário para apontamento de pragas identificadas no local de trabalho",
+		"secondAnswer": "Formulário de controle estatístico de processo",
+		"thirdAnswer": "Relatório aberto para dar conhecimento oficial e legal do material ou produto com desvio de qualidade às pessoas responsáveis pela solução do problema.",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},	
+	{
+		"text": "Qual a importância de abrir a 'NQ' para problemas de qualidade?",
+		"firstAnswer": "Apenas para registrar que ocorreu o desvio",
+		"secondAnswer": "Assegurar que produtos/materiais não conformes não tenham utilização inadequada e que proceda com investigação e solução do problema.",
+		"thirdAnswer": "É necessário abrir NQ apenas para problemas graves de qualidade",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},	
+	{
+		"text": "Quando devemos lavar as mãos?",
+		"firstAnswer": "Sempre antes de entrar nas manufaturas; antes das refeições; após utilizar banheiros; após tocar na face, nariz, boca, orelhas ou cabeça; Após tocar o produto de maneira inadequada; etc  ",
+		"secondAnswer": "Apenas quando for entrar na manufatura",
+		"thirdAnswer": "Apenas após utilizar o banheiro",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},	
+	{
+		"text": "Qual é a importância da Certificação FSSC22000?",
+		"firstAnswer": "Apenas cumprir com requisitos legais",
+		"secondAnswer": "Através da certificação FSSC 22000, a companhia  demonstra sua habilidade em controlar os perigos, a fim de garantir um alimento seguro para consumo.",
+		"thirdAnswer": "Através da certificação FSSC 22000, a companhia  demonstra sua habilidade em cuidar do meio ambiente",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},	
+	{
+		"text": "Como podemos prevenir a contaminação dos nossos produtos por pelos/cabelos?",
+		"firstAnswer": "Apenas utilizando touca já é suficiente",
+		"secondAnswer": "Utilizar a manga do uniforme para cima sem cobrir todo o braço não apresenta nenhum risco",
+		"thirdAnswer": "Utilizando a touca corretamente cobrindo todo o cabelo, fazendo a barba diariamente e a manga do uniforme cobrindo todo o braço.",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},	
+	{
+		"text": "Qual das seguintes alternativas representa os itens do 'Top 5 for Zero'?",
+		"firstAnswer": "Contaminação do Produto, Troca de embalagem, Erros de Arte de embalagem, Liberação incorreta de produto e Erros de adição e pesagem",
+		"secondAnswer": "Codificação, Falta de componentes, Ambiente desorganizado  e Falha de comunicação",
+		"thirdAnswer": "Incidentes de segurança, Falha no seguimento do GMP, Preenchimento incorreto de registros",
+        "rightAnswer": 1,
+        "theme": 2
+		"fourthAnswer": "Eu desconheço",
+	},	
+	{
+		"text": "Quais das alternativas a seguir representam perigos químicos?",
+		"firstAnswer": "Metais, vidros, madeira, papel, plástico ",
+		"secondAnswer": "Escherichia Coli, Salmonella, Bacillus Cereus",
+		"thirdAnswer": "Soluções químicas, Produtos de limpeza, inseticidas",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},		
+	{
+		"text": "Como saber se a ação implemetada foi eficiente para reduzir ou zerar os problemas de qualidade?",
+		"firstAnswer": "Acompanhar processo, indicadores de qualidade e/ou reclamações de consumidor",
+		"secondAnswer": "Apenas conversar com os técnicos",
+		"thirdAnswer": "Não é necessário verificar os resultados",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},		
+	{
+		"text": "Quais das alternativas a seguir representam perigos físicos?",
+		"firstAnswer": "Metais, vidros, madeira, papel, plástico ",
+		"secondAnswer": "Soluções químicas, Produtos de limpeza, inseticidas",
+		"thirdAnswer": "Escherichia Coli, Salmonella, Bacillus Cereus",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},		
+	{
+		"text": "Quais das alternativas a seguir representam perigos microbiológicos?",
+		"firstAnswer": "Soluções químicas, produtos de Limpeza, inseticidas",
+		"secondAnswer": "Escherichia Coli, Salmonella, Bacillus Cereus",
+		"thirdAnswer": "Ovos, glúten, peixe, leite",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},		
+	{
+		"text": "Quais das alternativas a seguir representam perigos alergênicos?",
+		"firstAnswer": "Soluções químicas, produtos de Limpeza, inseticidas",
+		"secondAnswer": "Ovos, glúten, peixe, leite",
+		"thirdAnswer": "Escherichia Coli, Salmonella, Bacillus Cereus",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},
+	{
+		"text": "Quais os cuidados devemos ter com os nossos uniformes?",
+		"firstAnswer": "Mantê-los limpos e em bom estado; não sentar no chão; trocá-los diariamente; não fazer alterações",
+		"secondAnswer": "Apenas não fazer alterações no uniforme",
+		"thirdAnswer": "Lembrar de usar todos os dias, independente do estado",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},
+	{
+		"text": "O que é rastreabilidade?",
+		"firstAnswer": "É a montagem do pallet conforme o book",
+		"secondAnswer": "É o meio utilizado pela empresa para que se possa  identificar o produto/processo de maneira rápida, o que é feito através da análise de informações importantes contidas nos registros de controle de processo.",
+		"thirdAnswer": "É a análise do produto acabado feita em laboratório",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},
+	{
+		"text": "Quais os cuidados devemos ter ao preencher registros/documentos?",
+		"firstAnswer": "Apenas preenche-los sem preocupar com as frequências",
+		"secondAnswer": "Preencher de lápis para que possa apagar em caso de erro",
+		"thirdAnswer": "Preencher todos os dados corretamente; Obedecer às frequências estabelecidas; Não rasurar, amassar, desenhar ou riscar; Utilizar caneta azul ou preta; Não utilizar o símbolo “II”quando repetir uma informação",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},
+	{
+		"text": "Qual é a importância da Segurança de Alimentos?",
+		"firstAnswer": "Garantir apenas um produto saboroso para o consumidor",
+		"secondAnswer": "Garantir que o alimento não causará dano ao consumidor quando preparado e/ou consumido ",
+		"thirdAnswer": "Produzir produtos baratos",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},		
+	{
+		"text": "Qual o objetivo das auditorias de GMP?",
+		"firstAnswer": "Apenas cumprir com as obrigações",
+		"secondAnswer": "Garantir o correto cumprimentos de GMP",
+		"thirdAnswer": "Observar desvios relacionados à meio ambiente",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},		
+	{
+		"text": "Qual o objetivo da Política de Qualidade?",
+		"firstAnswer": "Produzir produtos baratos",
+		"secondAnswer": "Garantir que os nossos produtos atendam às expectativas dos nossos consumidores",
+		"thirdAnswer": "Garantir apenas um produto saboroso para o consumidor",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},		
+	{
+		"text": "Quem é responsável pela qualidade dos nossos produtos?",
+		"firstAnswer": "Apenas da gerência da planta",
+		"secondAnswer": "Apenas do departamento de Qualidade",
+		"thirdAnswer": "Todos os colaboradores",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},		
+	{
+		"text": "O que são as regras de Ouro da Qualidade?",
+		"firstAnswer": "Regras para garantir o custo baixo da produção",
+		"secondAnswer": "Comportamento para prevenir acidentes no trabalho",
+		"thirdAnswer": "Comportamentos chaves para a garantia da qualidade e segurança dos alimentos",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},		
+	{
+		"text": "Qual a importância das películas anti-estilhaço presentes nos vidros das portas e janelas?",
+		"firstAnswer": "Protecção contra estilhaços em caso de quebra de vidros",
+		"secondAnswer": "Impedir a luz solar de entrar no ambiente",
+		"thirdAnswer": "Garantir que o vidro fique limpo",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},		
+	{
+		"text": "O que deve ser feito em caso de quebra de vidros?",
+		"firstAnswer": "Seguir com a atividade normalmente e quando der tempo alguém faz a limpeza",
+		"secondAnswer": "Remoção e lavagem dos fragmentos ; Inspeção e liberação do local; Descarte do produto contaminado, se houver; Abertura de NQ",
+		"thirdAnswer": "Depende do tamanho do vidro, se pequeno não é necessária ação",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},		
+	{
+		"text": "O que são problemas de 'máquina'?",
+		"firstAnswer": "Causa do problema está relacionada ao método ou procedimento utilizado para executar o trabalho",
+		"secondAnswer": "A causa do problema está relacionada à falhas de máquinas ",
+		"thirdAnswer": "A causa do problema está relacionada à matéria prima utilizada",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},		
+	{
+		"text": "O que é perigo?",
+		"firstAnswer": "Causas potenciais que podem tornar um alimento impróprio ao consumo e afetar a saúde do consumidor",
+		"secondAnswer": "Apenas causas que podem serar acidentes de trânsito",
+		"thirdAnswer": "Apenas causas que podem gerar contaminação radioativa",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},		
+	{
+		"text": "Porque  não podemos utilizar adornos na manufatura? (anéis, brincos, pulseiras, relógios, etc)"
+		"firstAnswer": "Estes objetos não podem ser limpos e sanitizados eficientemente; Podem contaminar nossos produtos (Material Estranho) e Podem causar acidentes",
+		"secondAnswer": "Apenas para cumprir regras",
+		"thirdAnswer": "Apenas brincos grandes não podem ser utilizados",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},		
+	{
+		"text": "O que é o teste de swab de mãos?",
+		"firstAnswer": "Análise das pragas presentes no local",
+		"secondAnswer": "Análise microbiológica que verifica a eficácia da higienização das mãos",
+		"thirdAnswer": "Não há importância nesse tipo de teste",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},		
+	{
+		"text": "O que é zoning?",
+		"firstAnswer": "Divisão física e visual da planta em sub áreas, levando à segregação de diferentes atividades, com diferentes níveis de higiene. ",
+		"secondAnswer": "Mapeamento de todos as máquinas da fábrica",
+		"thirdAnswer": "Mapeamento dos projetos de qualidade",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},
+	{",
+		"text": "Quais são os níveis de limpeza do zoning e por quais cores são representados?",
+		"firstAnswer": "Básico (verde), Médio (amarelo) e Alto (vermelho)",
+		"secondAnswer": "Pequeno (azul), Médio (roxo) e Alto (preto)",
+		"thirdAnswer": "Sem risco (azul) e com risco (verde)",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},		
+	{
+		"text": "O que é Ponto Crítico de Controle (PCC)?",
+		"firstAnswer": "Componentes que se não controlados podem quebrar o equipamento",
+		"secondAnswer": "Ponto específico no processo de fabricação que se não for controlado contribuirá para que o perigo esteja presente no produto e gere dano à saúde.",
+		"thirdAnswer": "Ponto que não precisa ser controlado",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},		
+	{
+		"text": "O que é Limite crítico de processo?",
+		"firstAnswer": "Faixa ou parâmetro de processo que garante que o ponto está sob controle.",
+		"secondAnswer": "Tempo máximo permitido para produção do produto",
+		"thirdAnswer": "Vida útil do equipamento",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},		
+	{
+		"text": "Quais as informações estão presentes nas etiquetas de identificação de PCC e PPRO?",
+		"firstAnswer": "Apenas o tipo de perigo está presente na etiqueta",
+		"secondAnswer": "Tipo do perigo; O que monitorar; Como e o que fazer caso encontrar algum roblema; etc",
+		"thirdAnswer": "Está presente a foto do equipamento com o resposável pela manutenção preventiva",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 2,
+        "theme": 2
+	},
+	{
+		"text": "Quais são os critérios de avaliação para as amostras de CRQS?",
+		"firstAnswer": "Conforme (azul) e Não Conforme (vermelho)",
+		"secondAnswer": "Básico (azul), Médio (verde) e Alto (vermelho)",
+		"thirdAnswer": "Verde (aceitável), amarelo (pouco aceitável) e vermelho (inaceitável)",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 3,
+        "theme": 2
+	},
+	{
+		"text": "O que é um produto conforme?",
+		"firstAnswer": "Produto que está com no máximo 1 desvio de qualidade+D94",
+		"secondAnswer": "Atitude tomada após ocorrência do problema",
+		"thirdAnswer": "Produto produzido na máquina modelo",
+		"fourthAnswer": "Eu desconheço",
+        "rightAnswer": 1,
+        "theme": 2
+	},
+]	
+	
+]	
