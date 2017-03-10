@@ -211,9 +211,9 @@
 		"firstAnswer": "Informar os perigos da área",
 		"secondAnswer": "Padronizar as atividadess mostrando claramente os passos",
 		"thirdAnswer": "Apenas cumprir os requisitos de WCM",
+		"fourthAnswer": "Eu desconheço",
         "rightAnswer": 2,
         "theme": 1
-		"fourthAnswer": "Eu desconheço",
 	},	
 	{
 		"text": "Qual o objetivo da ferramenta '5 perguntas para zero defeito'?",
@@ -369,7 +369,7 @@
         "theme": 1
 	},		
 	{
-		"text": "O que são problemas de 'mão de obra'?"
+		"text": "O que são problemas de 'mão de obra'?",
 		"firstAnswer": "Causa do problema está relacionada ao método ou procedimento utilizado para executar o trabalho",
 		"secondAnswer": "A causa do problema está relacionada à falhas de máquinas",
 		"thirdAnswer": "A causa do problema está relacionado à falha humana",
@@ -395,7 +395,7 @@
         "rightAnswer": 3,
         "theme": 1
 	},
-	{",
+	{
 		"text": "Qual das alternativas a seguir contém ferramentas básicas para desenvolvimento de  um kaizen?",
 		"firstAnswer": "4M, Skecht, 5W1H, 5 Porques",
 		"secondAnswer": "5S, GMP, Inbound sampling",
@@ -431,7 +431,6 @@
         "rightAnswer": 2,
         "theme": 1
 	},
-[
 	{
 		"text": "O que significa CRQS?",
 		"firstAnswer": "Termo em inglês que significa 'Padrões de Segurança'",
@@ -497,7 +496,7 @@
 	},	
 	{
 		"text": "Qual o objetivo do Food Defense (Defesa do Alimento)?",
-		"firstAnswer": "Proteger nossos produtos contra adulteração intencional e assegurar produtos seguros para os consumidores.	",
+		"firstAnswer": "Proteger nossos produtos contra adulteração intencional e assegurar produtos seguros para os consumidores.",
 		"secondAnswer": "Controlar as embalagens utilizadas",
 		"thirdAnswer": "Controlar o tempo de produção",
 		"fourthAnswer": "Eu desconheço",
@@ -535,7 +534,7 @@
 		"text": "O que é FSSC22000?",
 		"firstAnswer": "É um sistema de gestão de meio ambiente",
 		"secondAnswer": "É um sistema de gestão de controle de pragas",
-		"thirdAnswer": "É um sistema de gestão de segurança dos alimentos	",
+		"thirdAnswer": "É um sistema de gestão de segurança dos alimentos.",
 		"fourthAnswer": "Eu desconheço",
         "rightAnswer": 3,
         "theme": 2
@@ -644,9 +643,9 @@
 		"firstAnswer": "Contaminação do Produto, Troca de embalagem, Erros de Arte de embalagem, Liberação incorreta de produto e Erros de adição e pesagem",
 		"secondAnswer": "Codificação, Falta de componentes, Ambiente desorganizado  e Falha de comunicação",
 		"thirdAnswer": "Incidentes de segurança, Falha no seguimento do GMP, Preenchimento incorreto de registros",
+		"fourthAnswer": "Eu desconheço",
         "rightAnswer": 1,
         "theme": 2
-		"fourthAnswer": "Eu desconheço",
 	},	
 	{
 		"text": "Quais das alternativas a seguir representam perigos químicos?",
@@ -802,7 +801,7 @@
         "theme": 2
 	},		
 	{
-		"text": "Porque  não podemos utilizar adornos na manufatura? (anéis, brincos, pulseiras, relógios, etc)"
+		"text": "Porque  não podemos utilizar adornos na manufatura? (anéis, brincos, pulseiras, relógios, etc)",
 		"firstAnswer": "Estes objetos não podem ser limpos e sanitizados eficientemente; Podem contaminar nossos produtos (Material Estranho) e Podem causar acidentes",
 		"secondAnswer": "Apenas para cumprir regras",
 		"thirdAnswer": "Apenas brincos grandes não podem ser utilizados",
@@ -828,7 +827,7 @@
         "rightAnswer": 1,
         "theme": 2
 	},
-	{",
+	{
 		"text": "Quais são os níveis de limpeza do zoning e por quais cores são representados?",
 		"firstAnswer": "Básico (verde), Médio (amarelo) e Alto (vermelho)",
 		"secondAnswer": "Pequeno (azul), Médio (roxo) e Alto (preto)",
@@ -881,7 +880,5 @@
 		"fourthAnswer": "Eu desconheço",
         "rightAnswer": 1,
         "theme": 2
-	},
-]	
-	
-]	
+	}
+]
