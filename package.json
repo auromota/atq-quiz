@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "build": 'node_modules/.bin/electron-packager . "Quiz Unilever" --platform=win32 --arch=all --icon="www/img/icon-cerebro.ico" --version-string.CompanyName="BlueOrc" --version-string.ProductName="Quiz Unilever" --version-string.ProductVersion="1.0.0"'
+    "build": "electron-packager . \"Quiz Unilever\" --platform=win32 --arch=ia32 --icon=\"www/img/icon-cerebro.ico\" --version-string.CompanyName=\"BlueOrc\" --version-string.ProductName=\"Quiz Unilever\" --version-string.ProductVersion=\"1.0.0\""
   },
   "repository": {
     "type": "git",
