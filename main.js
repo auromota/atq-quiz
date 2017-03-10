@@ -25,7 +25,7 @@ app.on('ready', function () {
         mainWindow = null;
     });
 
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
 
     try {
         win.webContents.debugger.attach('1.1')
