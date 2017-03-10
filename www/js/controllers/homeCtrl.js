@@ -7,10 +7,12 @@
 
     app.controller('homeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$scope'];
+    homeCtrl.$inject = ['$scope', '$rootScope'];
 
-    function homeCtrl($scope) {
+    
 
+    function homeCtrl($scope, $rootScope) {
+        $rootScope.$broadcast('homeInitialized');
     }
 
 })();

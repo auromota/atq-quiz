@@ -44,6 +44,11 @@
             $scope.background = 'background-logs';
         });
 
+        
+        $scope.$on('homeInitialized', function(event) {
+            $scope.background = 'background';
+        });
+
         function getUserTests(theme) {
             testService.getByUserIdAndTheme($scope.user.id, theme).then(checkTests);
         }
