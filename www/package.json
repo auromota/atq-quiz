@@ -5,7 +5,6 @@
   "scripts": {
     "start": "http-server -o",
     "deploy": "gulp",
-    "build": 'node_modules/.bin/electron-packager . "Quiz Unilever" --platform=win32 --arch=all --icon="www/img/icon-cerebro.ico" --version-string.CompanyName="BlueOrc" --version-string.ProductName="Quiz Unilever" --version-string.ProductVersion="1.0.0"'
   },
   "author": "BlueOrc",
   "contributors": [
