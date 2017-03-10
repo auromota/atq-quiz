@@ -1,3 +1,6 @@
 /node_modules
 /.vscode
 www/npm-debug.log
+/output
+/quiz unilever-win32-ia32
+*.iss
