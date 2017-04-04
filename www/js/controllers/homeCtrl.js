@@ -7,12 +7,31 @@
 
     app.controller('homeCtrl', homeCtrl);
 
-    homeCtrl.$inject = ['$scope', '$rootScope'];
+    homeCtrl.$inject = ['$scope', '$rootScope', '$state'];
 
-    
+    function homeCtrl($scope, $rootScope, $state) {
+        $scope.user = {};
+        $scope.showError = false;
 
-    function homeCtrl($scope, $rootScope) {
         $rootScope.$broadcast('homeInitialized');
+
+        $scope.login = function() {
+            $('#loginModal').modal('show');
+        }
+
+        $scope.executeLogin = function() {
+            if (($scope.user.email == "naiara.bianchetti@unilever.com" || $scope.user.email == "valeria.toratti@unilever.com")
+             && $scope.user.password == "mtsqc") {
+                $('#loginModal').modal('hide');
+                $('body').removeClass('modal-open');
+                $('.modal-backdrop').remove();
+                $scope.user = {};
+                $scope.showError = false;
+                $state.go('logs', {});
+             }else{
+                 alert("E-mail e/ou senha errado(s)...");
+             }
+        }
     }
 
 })();

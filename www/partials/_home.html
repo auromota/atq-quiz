@@ -28,6 +28,47 @@
 
 <ul class="breadcrumb breadcrumb-bottom">
     <li class="">
-        <a ui-sref="logs">Relatórios</a>
+        <a ng-click="login()">Relatórios</a>
+        <!--<a ui-sref="logs">Relatórios</a>-->
     </li>
 </ul>
+
+<!-- Button trigger modal -->
+<div class="modal fade"  id="loginModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="padding:20px">
+            <div class="modal-body">
+                <div class="row text-center">
+                    <div class="col-sm-4 col-lg-4 col-md-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
+                        <img src="img/icon-cerebro.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <h4 style="font-size:32px;font-family: Calibri;font-weight: bold">Acesso Restrito</h4>
+                    <h6 style="font-size:18px;font-family: Calibri;color: #999">Entre com seu usuário e senha</h6>
+                </div>
+                <hr>
+                <div class="row text-center center-component">
+                    <form class="form-horizontal col-md-8 col-md-offset-2" name="loginForm" ng-submit="executeLogin()">
+                        <div class="form-group" ng-class="{'has-error': (credentialsForm.id.$error.required && credentialsForm.id.$dirty)}">
+                            <input type="text" class="form-control" name="id" ng-model="user.email" required placeholder="Digite seu E-mail">
+                        </div>
+                        <div class="form-group" ng-class="{'has-error': (credentialsForm.name.$error.required && credentialsForm.name.$dirty)}">
+                            <input type="password" class="form-control" name="password" ng-model="user.password" required placeholder="Digite sua senha">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6 col-md-6 col-md-offset-3 col-lg-offset-3 col-sm-offset-3">
+                                    <button type="submit" style="background: none; border: none; padding: 0px">
+                                        <img src="img/btn-continue.png" alt="" style="width: 130px">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
