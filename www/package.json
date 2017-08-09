@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "http-server -o",
-    "deploy": "gulp",
+    "deploy": "gulp"
   },
   "author": "BlueOrc",
   "contributors": [

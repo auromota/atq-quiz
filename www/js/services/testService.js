@@ -13,6 +13,7 @@
         var service = {
             getByUserId: getByUserId,
             add: add,
+            remove: remove,
             update: update,
             getById: getById,
             getAllTestsAndUsers: getAllTestsAndUsers,
@@ -149,6 +150,18 @@
             } catch (err) {
                 deferred.reject(err);
             }
+            return deferred.promise;
+        }
+
+        function remove(id) {
+            var deferred = $q.defer();
+            crudService.remove(id, 'tests', 'id').then(
+                function (result) {
+                    deferred.resolve(result);
+                }, function (err) {
+                    deferred.reject(err);
+                }
+            );
             return deferred.promise;
         }
 

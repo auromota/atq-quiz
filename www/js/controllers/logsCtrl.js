@@ -86,6 +86,24 @@
             $state.go('testDetails', { testId: id });
         }
 
+        $scope.remove = function (id) {
+            if(confirm("Você realmente deseja excluir esse teste?")) 
+            {
+                testService.remove(id).then(function(data) {
+                    loadTests();
+                });
+            }
+        }
+
+        $scope.removeAll = function () {
+            if(confirm("Você realmente deseja excluir TODOS os testes?")) 
+            {
+                testService.removeAll().then(function(data) {
+                    loadTests();
+                });
+            }
+        }
+
         $scope.$watch('filter.dateFrom', function (newValue, oldValue) {
             filter.dateFrom = newValue;
             loadTests();

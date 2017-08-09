@@ -94,6 +94,12 @@
                                     <th>Feito em</th>
                                     <th>Tema</th>
                                     <th>Detalhes</th>
+                                    <th>
+                                        Excluir
+                                        <button ng-click="removeAll()" class="btn btn-mini btn-primary">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </button>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -107,6 +113,7 @@
                                     <td>{{test.tests.completedOn | date: 'dd/MM/yyyy - HH:mm'}}</td>
                                     <td>{{test.tests.theme == 1 ? 'WCM – Controle de Qualidade' : 'Qualidade e Segurança de Alimentos'}}</td>
                                     <td ng-click="details(test.tests.id)"><span class="glyphicon glyphicon-info-sign mouse-link"></span></td>
+                                    <td ng-click="remove(test.tests.id)"><span class="glyphicon glyphicon-trash mouse-link"></span></td>
                                 </tr>
                             </tbody>
                         </table>
